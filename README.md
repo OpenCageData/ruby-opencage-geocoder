@@ -1,7 +1,7 @@
 # OpenCage Geocoder
 
-A Ruby gem that uses [OpenCage Data's](http://www.opencagedata.com/)
-geocoder.
+A Ruby client for the [OpenCage Data](http://www.opencagedata.com/)
+geocoder API.
 
 ## Usage
 
