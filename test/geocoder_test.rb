@@ -6,6 +6,10 @@ require 'minitest/autorun'
 require_relative '../lib/opencage/geocoder'
 
 describe OpenCage::Geocoder do
+  def geo
+    OpenCage::Geocoder.new(api_key: ENV.fetch('OPEN_CAGE_API_KEY'))
+  end
+
   describe 'authentication' do
     it 'raises an error if the API key is missing' do
       proc {
@@ -21,14 +25,32 @@ describe OpenCage::Geocoder do
     end
   end
 
-  # Failed fetch
-
-
-  describe '#geocode' do
-    def geo
-      OpenCage::Geocoder.new(api_key: ENV.fetch('OPEN_CAGE_API_KEY'))
+  describe '#reverse_geocode' do
+    def bermondsey
+      'Bermondsey Wall West, Bermondsey, London Borough of Southwark, London, SE14, Greater London, England, United Kingdom, gb, London Borough of Southwark'
     end
 
+    it 'reverse geocodes a set of coordinates' do
+      assert_equal bermondsey, geo.reverse_geocode(51.5019951, -0.0698806)
+    end
+
+    it 'accepts an array for coordinates' do
+      assert_equal bermondsey, geo.reverse_geocode([51.5019951, -0.0698806])
+    end
+
+    it 'accepts strings for coordinates' do
+      assert_equal bermondsey, geo.reverse_geocode([51.5019951, '-0.0698806'])
+    end
+
+    it 'raises an error for badly formed input' do
+      exception = proc {
+        geo.reverse_geocode('NOT-A-COORD', 51.50934)
+      }.must_raise ArgumentError
+      assert_equal 'invalid value for Float(): "NOT-A-COORD"', exception.message
+    end
+  end
+
+  describe '#geocode' do
     it 'geocodes a place name' do
       assert_equal [ -32.5980702, 149.5886383 ], geo.geocode('Mudgee, Australia')
     end
@@ -43,6 +65,13 @@ describe OpenCage::Geocoder do
 
     it 'correctly parses a request with encoding in the response' do
       assert_equal [ 43.3213324, -1.9856227 ], geo.geocode('Donostia')
+    end
+
+    it 'throws a useful error when no results are found' do
+      exception = proc {
+        geo.geocode('NOWHERE-INTERESTING')
+      }.must_raise OpenCage::Geocoder::GeocodingError
+      assert_equal exception.message, 'location not found'
     end
   end
 end

@@ -4,36 +4,61 @@ require 'json'
 module OpenCage
   class Geocoder
     class Location
-      attr_reader :name, :geo
+      attr_reader :geo, :name
 
-      def initialize(name, geo)
-        @name, @geo = name, geo
+      def initialize(geo, options={})
+        @geo  = geo
+        @lat  = options[:lat]
+        @lng  = options[:lng]
+        @name = options[:name]
+      end
+
+      def lat
+        @lat ||= results.first['geometry']['lat'].to_f
+      end
+
+      def lng
+        @lng ||= results.first['geometry']['lng'].to_f
+      end
+
+      def name
+        @name ||= results.first['formatted']
       end
 
       def coordinates
-        @coordinates ||= [response['lat'], response['lng']].map(&:to_f)
+        [ lat, lng ]
       end
 
       private
 
-      def response
-        @response ||= JSON.parse(fetch)['results'][0]['geometry']
+      def results
+        @results ||= Array(fetch).tap do |results|
+          raise GeocodingError.new('location not found') if results.empty?
+        end
       end
 
       def fetch
-        open(url).read
+        JSON.parse(open(url).read)['results']
       rescue OpenURI::HTTPError => error
-        raise OpenCage::Geocoder::GeocodingError.new(error_message(error))
+        raise GeocodingError.new(error_message(error))
       end
 
       def url
         uri = URI.parse(geo.url)
-        uri.query = [uri.query, "q=#{URI::encode(name)}"].join('&')
+        uri.query = [uri.query, "q=#{query}"].join('&')
         uri
       end
 
+      def query
+        if @lat && @lng && !@name
+          "#{lat},#{lng}"
+        elsif @name
+          URI::encode(@name)
+        end
+      end
+
       def error_message(error)
-        (String(error) =~ /\A403/) ? 'Invalid API key' : error
+        (String(error) =~ /\A403/) ? 'invalid API key' : error
       end
     end
   end
