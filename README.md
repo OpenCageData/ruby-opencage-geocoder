@@ -5,21 +5,21 @@ geocoder.
 
 ## Usage
 
-Load the module:
+In your Gemfile (rubygems coming soon):
+
+```ruby
+gem 'opencage-geocoder', github: 'lokku/ruby-opencage-geocoder'
+```
+
+Create an instance of the geocoder, passing a valid OpenCage Data Geocoder API key:
 
 ```ruby
 require 'opencage/geocoder'
+
+geocoder = OpenCage::Geocoder.new(api_key: 'your-api-key-here')
 ```
 
-Create an instance of the geocoder, passing a valid OpenCage Data Geocoder API key
-as a parameter:
-
-```ruby
-key = 'your-api-key-here'
-geocoder = OpenCage::Geocoder.new(api_key: key)
-```
-
-Pass a string containing the query or address to be geocoded to the modules's `geocode` method:
+Pass a string containing the query or address to be geocoded to the `geocode` method:
 
 ```ruby
 geocoder.geocode("82 Clerkenwell Road, London")
