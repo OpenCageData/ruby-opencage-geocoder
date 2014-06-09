@@ -34,12 +34,12 @@ describe OpenCage::Geocoder do
       assert_equal bermondsey, geo.reverse_geocode(51.5019951, -0.0698806)
     end
 
-    it 'accepts an array for coordinates' do
-      assert_equal bermondsey, geo.reverse_geocode([51.5019951, -0.0698806])
+    it 'accepts arrays and strings for coordinates' do
+      assert_equal bermondsey, geo.reverse_geocode([51.5019951, '-0.0698806'])
     end
 
-    it 'accepts strings for coordinates' do
-      assert_equal bermondsey, geo.reverse_geocode([51.5019951, '-0.0698806'])
+    it 'is simple to handle a single string' do
+      assert_equal bermondsey, geo.reverse_geocode('51.5019951 -0.0698806'.split)
     end
 
     it 'raises an error for badly formed input' do

@@ -31,14 +31,8 @@ You can also reverse geocode to get an address from a pair of coordinates:
 ```ruby
 geocoder.reverse_geocode(51.5019951, -0.0698806)
 # => 'Bermondsey Wall West, Bermondsey, London Boro ...
-```
 
-The input type is flexible:
-
-```ruby
-geocoder.reverse_geocode([51.5019951, -0.0698806])
-# => 'Bermondsey Wall West, Bermondsey, London Boro ...
-
-geocoder.reverse_geocode(51.5019951, '-0.0698806')
+# input type is flexible
+geocoder.reverse_geocode([51.5019951, '-0.0698806'])
 # => 'Bermondsey Wall West, Bermondsey, London Boro ...
 ```
