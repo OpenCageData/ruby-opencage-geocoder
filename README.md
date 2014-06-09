@@ -1,4 +1,4 @@
-# OpenCage Data Geocoding Module for Python
+# OpenCage Geocoder
 
 A Ruby gem that uses [OpenCage Data's](http://www.opencagedata.com/)
 geocoder.
