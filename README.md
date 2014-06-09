@@ -1,6 +1,6 @@
 # OpenCage Geocoder
 
-A Ruby client for the [OpenCage Data](http://www.opencagedata.com/)
+A ruby client for the [OpenCage Data](http://www.opencagedata.com/)
 geocoder API.
 
 ## Usage
