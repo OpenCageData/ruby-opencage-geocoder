@@ -5,10 +5,16 @@ geocoder API.
 
 ## Usage
 
-In your Gemfile (rubygems coming soon):
+```
+$ gem install opencage-geocoder
+```
+
+Or in your Gemfile:
 
 ```ruby
-gem 'opencage-geocoder', github: 'lokku/ruby-opencage-geocoder'
+source 'https://rubygems.org'
+
+gem 'opencage-geocoder'
 ```
 
 Create an instance of the geocoder, passing a valid OpenCage Data Geocoder API key:
