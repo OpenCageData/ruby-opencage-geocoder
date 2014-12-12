@@ -1,0 +1,14 @@
+PATH
+  remote: .
+  specs:
+    opencage-geocoder (0.1.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  opencage-geocoder!
