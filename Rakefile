@@ -17,11 +17,11 @@ end
 ##
 require 'rake/testtask'
 
-Rake::TestTask.new :test do |t|
-  t.test_files = Dir['test/*_test.rb']
+Rake::TestTask.new :spec do |t|
+  t.test_files = Dir['spec/*_spec.rb']
 end
 
 ##
 # By default, just run the tests.
 ##
-task default: :test
+task default: :spec
