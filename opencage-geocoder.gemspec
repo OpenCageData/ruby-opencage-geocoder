@@ -1,6 +1,10 @@
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'opencage/version'
+
 Gem::Specification.new do |s|
   s.name        = 'opencage-geocoder'
-  s.version     = '0.1.0'
+  s.version     = OpenCage::VERSION
   s.licenses    = ['MIT']
   s.summary     = "A client for the OpenCage Data geocoder API"
   s.description = "A client for the OpenCage Data geocoder API"
