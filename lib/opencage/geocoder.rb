@@ -1,4 +1,4 @@
-require_relative 'geocoder/location'
+require 'opencage/geocoder/location'
 
 module OpenCage
   class Geocoder
