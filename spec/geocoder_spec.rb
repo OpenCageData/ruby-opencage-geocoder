@@ -1,9 +1,6 @@
 # encoding: utf-8
 
-require 'minitest/pride'
-require 'minitest/autorun'
-
-require_relative '../lib/opencage/geocoder'
+require File.expand_path 'spec_helper.rb', __dir__
 
 describe OpenCage::Geocoder do
   def geo
