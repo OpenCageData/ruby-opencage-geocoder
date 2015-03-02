@@ -10,6 +10,6 @@ Gem::Specification.new do |s|
   s.description = "A client for the OpenCage Data geocoder API"
   s.authors     = ["Samuel Scully"]
   s.email       = 'dev@lokku.com'
-  s.files       = ["lib/opencage/geocoder.rb"]
+  s.files       = Dir['lib/**/*.{rb}']
   s.homepage    = 'https://github.com/lokku/ruby-opencage-geocoder'
 end
