@@ -1,3 +1,6 @@
+
+[![Build Status](https://travis-ci.org/OpenCageData/ruby-opencage-geocoder.svg?branch=master)](https://travis-ci.org/OpenCageData/ruby-opencage-geocoder)
+
 # OpenCage Geocoder
 
 A ruby client for the [OpenCage Data](http://www.opencagedata.com/)
