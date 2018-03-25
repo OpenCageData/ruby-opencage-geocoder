@@ -7,9 +7,9 @@ Gem::Specification.new do |s|
   s.version     = OpenCage::VERSION
   s.licenses    = ['MIT']
   s.summary     = "A client for the OpenCage Data geocoder API"
-  s.description = "A client for the OpenCage Data geocoder API - http://geocoder.opencagedata.com/"
+  s.description = "A client for the OpenCage Data geocoder API - https://geocoder.opencagedata.com/"
   s.authors     = ["Samuel Scully"]
-  s.email       = 'dev@lokku.com'
+  s.email       = 'support@opencagedata.com'
   s.files       = Dir['lib/**/*.{rb}']
-  s.homepage    = 'https://github.com/lokku/ruby-opencage-geocoder'
+  s.homepage    = 'https://github.com/opencagedata/ruby-opencage-geocoder'
 end
