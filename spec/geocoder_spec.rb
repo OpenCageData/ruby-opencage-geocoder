@@ -9,66 +9,67 @@ describe OpenCage::Geocoder do
 
   describe 'authentication' do
     it 'raises an error if the API key is missing' do
-      proc {
+      expect {
         OpenCage::Geocoder.new
-      }.must_raise OpenCage::Geocoder::GeocodingError
+      }.to raise_error(OpenCage::Geocoder::GeocodingError)
     end
 
     it 'raises an error when geocoding if the API key is incorrect' do
-      proc {
+      expect {
         geo = OpenCage::Geocoder.new(api_key: 'AN-INVALID-KEY')
         geo.geocode('SOMEWHERE')
-      }.must_raise OpenCage::Geocoder::GeocodingError
+      }.to raise_error(OpenCage::Geocoder::GeocodingError)
     end
   end
 
   describe '#reverse_geocode' do
     def bermondsey
-      'Garden Barge Square, Bermondsey Wall West, London SE1 2BP, United Kingdom'
+      'Reeds Wharf, 33 Mill Street, London SE15, United Kingdom'
     end
 
     it 'reverse geocodes a set of coordinates' do
-      assert_equal bermondsey, geo.reverse_geocode(51.5019951, -0.0698806)
+      expect(geo.reverse_geocode(51.5019951, -0.0698806)).to eql(bermondsey)
     end
 
     it 'accepts arrays and strings for coordinates' do
-      assert_equal bermondsey, geo.reverse_geocode([51.5019951, '-0.0698806'])
+      expect(geo.reverse_geocode([51.5019951, '-0.0698806'])).to eql(bermondsey)
     end
 
     it 'is simple to handle a single string' do
-      assert_equal bermondsey, geo.reverse_geocode('51.5019951 -0.0698806'.split)
+      expect(geo.reverse_geocode('51.5019951 -0.0698806'.split)).to eql(bermondsey)
     end
 
     it 'raises an error for badly formed input' do
-      exception = proc {
+      expect {
         geo.reverse_geocode('NOT-A-COORD', 51.50934)
-      }.must_raise ArgumentError
-      assert_equal 'invalid value for Float(): "NOT-A-COORD"', exception.message
+      }.to raise_error('invalid value for Float(): "NOT-A-COORD"')
     end
   end
 
   describe '#geocode' do
     it 'geocodes a place name' do
-      assert_equal [ -32.5980702, 149.5886383 ], geo.geocode('Mudgee, Australia')
+      expect(geo.geocode('Mudgee, Australia')).to eql([-32.5980702, 149.5886383]) 
     end
 
     it 'geocodes a postcode' do
-      assert_equal [ 51.5226520706329, -0.102462362688833 ], geo.geocode('EC1M 5RF')
+      expect(geo.geocode('EC1M 5RF')).to eql([51.5226765, -0.102549])
     end
 
     it 'geocodes a place name with encoding' do
-      assert_equal [ 51.9501317, 7.61330165026119 ], geo.geocode('Münster')
+      expect(geo.geocode('Münster')).to eql([51.9501317, 7.6133017]) 
     end
 
     it 'correctly parses a request with encoding in the response' do
-      assert_equal [ 43.3224219, -1.9838889 ], geo.geocode('Donostia')
+      expect(geo.geocode('Donostia')).to eql([43.3224219, -1.9838889]) 
     end
 
     it 'throws a useful error when no results are found' do
-      exception = proc {
+      expect{
         geo.geocode('NOWHERE-INTERESTING')
-      }.must_raise OpenCage::Geocoder::GeocodingError
-      assert_equal exception.message, 'location not found'
+      }.to raise_error(OpenCage::Geocoder::GeocodingError)
+      expect{
+        geo.geocode('NOWHERE-INTERESTING')
+      }.to raise_error('location not found')
     end
   end
 end

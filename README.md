@@ -1,6 +1,7 @@
 
 [![Build Status](https://travis-ci.org/OpenCageData/ruby-opencage-geocoder.svg?branch=master)](https://travis-ci.org/OpenCageData/ruby-opencage-geocoder)
 [![Kritika Analysis Status](https://kritika.io/users/freyfogle/repos/3990778871294442/heads/master/status.svg)](https://kritika.io/users/freyfogle/repos/3990778871294442/heads/master/)
+[![Gem Version](https://badge.fury.io/rb/opencage-geocoder.svg)](https://badge.fury.io/rb/opencage-geocoder)
 
 # OpenCage Geocoder
 
