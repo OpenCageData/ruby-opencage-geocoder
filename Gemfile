@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 
 gemspec
 
-group :test do
-  gem 'rspec'
+group :development, :test do
   gem 'minitest'
+  gem 'rspec'
+  gem 'rubocop'
 end
