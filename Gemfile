@@ -4,6 +4,7 @@ gemspec
 
 group :development, :test do
   gem 'minitest'
+  gem 'rake'
   gem 'rspec'
   gem 'rubocop'
 end

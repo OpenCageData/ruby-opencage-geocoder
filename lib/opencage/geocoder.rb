@@ -9,7 +9,7 @@ module OpenCage
     attr_reader :api_key
 
     def initialize(options = {})
-      @api_key = options.fetch(:api_key) { raise GeocodingError.new('missing API key') }
+      @api_key = options.fetch(:api_key) { raise GeocodingError, 'missing API key' }
     end
 
     def geocode(location)

@@ -1,10 +1,11 @@
 require 'open-uri'
 require 'json'
+require 'cgi'
 
 module OpenCage
   class Geocoder
     class Location
-      attr_reader :geo, :name
+      attr_reader :geo
 
       def initialize(geo, options = {})
         @geo  = geo
@@ -33,14 +34,14 @@ module OpenCage
 
       def results
         @results ||= Array(fetch).tap do |results|
-          raise GeocodingError.new('location not found') if results.empty?
+          raise GeocodingError, 'location not found' if results.empty?
         end
       end
 
       def fetch
         JSON.parse(URI(url).open.read)['results']
       rescue OpenURI::HTTPError => error
-        raise GeocodingError.new(error_message(error))
+        raise GeocodingError, error_message(error)
       end
 
       def url
@@ -53,7 +54,7 @@ module OpenCage
         if @lat && @lng && !@name
           "#{lat},#{lng}"
         elsif @name
-          URI.encode(@name)
+          CGI.escape(@name)
         end
       end
 
