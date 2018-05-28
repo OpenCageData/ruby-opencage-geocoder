@@ -4,3 +4,5 @@ Metrics/BlockLength:
   Max: 100
 Metrics/LineLength:
   Max: 120
+Style/Documentation:
+  Enabled: false
