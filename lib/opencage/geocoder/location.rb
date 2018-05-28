@@ -33,14 +33,14 @@ module OpenCage
 
       def results
         @results ||= Array(fetch).tap do |results|
-          raise GeocodingError.new('location not found') if results.empty?
+          raise GeocodingError, 'location not found' if results.empty?
         end
       end
 
       def fetch
         JSON.parse(URI(url).open.read)['results']
       rescue OpenURI::HTTPError => error
-        raise GeocodingError.new(error_message(error))
+        raise GeocodingError, error_message(error)
       end
 
       def url
