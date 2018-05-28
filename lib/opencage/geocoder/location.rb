@@ -4,7 +4,7 @@ require 'json'
 module OpenCage
   class Geocoder
     class Location
-      attr_reader :geo, :name
+      attr_reader :geo
 
       def initialize(geo, options = {})
         @geo  = geo
