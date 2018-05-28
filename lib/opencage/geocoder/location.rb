@@ -1,5 +1,6 @@
 require 'open-uri'
 require 'json'
+require 'cgi'
 
 module OpenCage
   class Geocoder
@@ -53,7 +54,7 @@ module OpenCage
         if @lat && @lng && !@name
           "#{lat},#{lng}"
         elsif @name
-          URI.encode(@name)
+          CGI.escape(@name)
         end
       end
 
