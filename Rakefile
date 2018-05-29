@@ -16,9 +16,10 @@ end
 # Configure the test suite.
 ##
 require 'rake/testtask'
+require 'rspec/autorun'
 
 Rake::TestTask.new :spec do |t|
-  t.test_files = Dir['spec/*_spec.rb']
+  t.test_files = FileList['spec/**/*_spec.rb']
 end
 
 ##
