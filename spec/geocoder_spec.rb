@@ -50,7 +50,7 @@ describe OpenCage::Geocoder do
     end
 
     it 'geocodes a postcode' do
-      expect(geo.geocode('EC1M 5RF')).to eql([51.5226765, -0.102549])
+      expect(geo.geocode('EC1M 5RF')).to eql([51.522676, -0.102549])
     end
 
     it 'geocodes a place name with encoding' do
