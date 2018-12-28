@@ -3,6 +3,7 @@ rvm:
   - 2.2
   - 2.4
   - 2.5
+  - 2.6
   - jruby
 install:
   - bundle install
