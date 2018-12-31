@@ -1,31 +1,43 @@
 require 'opencage/geocoder/location'
+require 'opencage/geocoder/request'
+require 'open-uri'
+require 'json'
 
 module OpenCage
   class Geocoder
     GeocodingError = Class.new(StandardError)
 
-    BASE_URL = 'http://api.opencagedata.com/geocode/v1/json'.freeze
-
-    attr_reader :api_key
-
-    def initialize(options = {})
-      @api_key = options.fetch(:api_key) { raise GeocodingError, 'missing API key' }
+    def initialize(default_options = {})
+      @api_key = default_options.fetch(:api_key) { raise GeocodingError, 'missing API key' }
     end
 
-    def geocode(location)
-      Location.new(self, name: location).coordinates
+    def geocode(location, options = {})
+      request = Request.new(@api_key, location, options)
+
+      results = fetch(request.to_s)
+      return [] unless results
+      # raise GeocodingError, 'location not found' if results.empty?
+
+      results.map { |r| Location.new(r) }
     end
 
-    def reverse_geocode(*coordinates)
-      # Accept input as numbers, strings or an array. Raise an error
-      # for anything that cannot be interpreted as a pair of floats.
-      lat, lng = coordinates.flatten.compact.map { |coord| Float(coord) }
+    def reverse_geocode(lat, lng, options = {})
+      lat = Float(lat)
+      lng = Float(lng)
 
-      Location.new(self, lat: lat, lng: lng).name
+      geocode("#{lat},#{lng}", options).first
     end
 
-    def url
-      "#{BASE_URL}?key=#{api_key}"
+    private
+
+    def fetch(url)
+      JSON.parse(URI(url).open.read)['results']
+    rescue OpenURI::HTTPError => error
+      raise GeocodingError, error_message(error)
+    end
+
+    def error_message(error)
+      String(error).start_with?('403') ? 'invalid API key' : error
     end
   end
 end

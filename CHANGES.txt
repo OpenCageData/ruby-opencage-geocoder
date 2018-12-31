@@ -1,3 +1,13 @@
+2.0.0 - Mon 31 Dec 2018
+===============================================================
+- geocode method now returns multiple results, not just one
+- results have accessors for components
+- geocode and reverse_geocode method take addtional parameters
+- if no result is found no longer is an error raised
+- reverse_geocode no longer supports coordinates as array
+- use https for requests
+- add LICENSE file
+
 0.1.2 - Tue 27 Oct 2015
 ===============================================================
 - change repository and author from 'lokku' to 'opencagedata'
