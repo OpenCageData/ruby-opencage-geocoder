@@ -16,7 +16,6 @@ module OpenCage
 
       results = fetch(request.to_s)
       return [] unless results
-      # raise GeocodingError, 'location not found' if results.empty?
 
       results.map { |r| Location.new(r) }
     end
