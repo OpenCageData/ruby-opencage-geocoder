@@ -6,6 +6,8 @@ rvm:
   - 2.6
   - jruby
 install:
+  - gem update --system --silent
+  - gem install bundler
   - bundle install
 script:
   - rspec
