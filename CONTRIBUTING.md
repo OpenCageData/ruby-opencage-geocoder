@@ -32,7 +32,7 @@ it 'geocodes a place name', :vcr do
 end
 ```
 
-If the OpenCage API has changed and cassettes need updating, you can refresh
+If the OpenCage API has changed and VCR cassettes need updating, you can refresh
 them as follows:
 
 ```
@@ -41,5 +41,5 @@ OPEN_CAGE_API_KEY=<YOUR_API_KEY> rspec
 ```
 
 You will need an OpenCage API key, which you can get by signing up at
-[opencagedata.com](https://opencagedata.com/). Running the test suite will more
-than comfortably fit in the free tier request limit.
+[opencagedata.com](https://opencagedata.com/). The free tier request quota
+will be more than enough to run the test suite.
