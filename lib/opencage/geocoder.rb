@@ -36,7 +36,14 @@ module OpenCage
     end
 
     def error_message(error)
-      String(error).start_with?('403') ? 'invalid API key' : error
+      case String(error)
+      when /^403/
+        'invalid API key'
+      when /^402/
+        'out of quota'
+      else
+        error
+      end
     end
   end
 end

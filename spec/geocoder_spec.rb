@@ -16,7 +16,17 @@ describe OpenCage::Geocoder do
       expect do
         geo = OpenCage::Geocoder.new(api_key: 'AN-INVALID-KEY')
         geo.geocode('SOMEWHERE')
-      end.to raise_error(OpenCage::Geocoder::GeocodingError)
+      end.to raise_error(OpenCage::Geocoder::GeocodingError, 'invalid API key')
+    end
+
+    it 'raises an error when geocoding if the user is out of quota' do
+      # Difficult to force a real 402, so simulate it with WebMock
+      stub_request(:get, /api\.opencagedata\.com/)
+        .to_return(body: '402 out of quota', status: 402)
+
+      expect do
+        geo.geocode('SOMEWHERE')
+      end.to raise_error(OpenCage::Geocoder::GeocodingError, 'out of quota')
     end
   end
 
