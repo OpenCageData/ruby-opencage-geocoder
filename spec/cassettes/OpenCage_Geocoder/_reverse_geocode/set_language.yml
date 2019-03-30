@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.opencagedata.com/geocode/v1/json?key=<OPEN_CAGE_API_KEY>&language=ru&q=51.5019951,-0.0698806
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 30 Mar 2019 14:46:18 GMT
+      Server:
+      - Apache/2.4.29 (Ubuntu)
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ratelimit-Limit:
+      - '2500'
+      X-Ratelimit-Remaining:
+      - '2477'
+      X-Ratelimit-Reset:
+      - '1553990400'
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '{"documentation":"https://opencagedata.com/api","licenses":[{"name":"CC-BY-SA","url":"https://creativecommons.org/licenses/by-sa/3.0/"},{"name":"ODbL","url":"https://opendatacommons.org/licenses/odbl/summary/"}],"rate":{"limit":2500,"remaining":2477,"reset":1553990400},"results":[{"annotations":{"DMS":{"lat":"51\u00b0
+        30'' 7.07904'''' N","lng":"0\u00b0 4'' 12.09360'''' E"},"MGRS":"30UYC0334809718","Maidenhead":"IO91xm10ol","Mercator":{"x":-7795.256,"y":6677108.473},"OSGB":{"easting":534052.106,"gridref":"TQ
+        340 798","northing":179879.821},"OSM":{"edit_url":"https://www.openstreetmap.org/edit?way=388422088#map=17/51.50197/-0.07003","url":"https://www.openstreetmap.org/?mlat=51.50197&mlon=-0.07003#map=17/51.50197/-0.07003"},"callingcode":44,"currency":{"alternate_symbols":[],"decimal_mark":".","html_entity":"&#x00A3;","iso_code":"GBP","iso_numeric":826,"name":"British
+        Pound","smallest_denomination":1,"subunit":"Penny","subunit_to_unit":100,"symbol":"\u00a3","symbol_first":1,"thousands_separator":","},"flag":"\ud83c\uddec\ud83c\udde7","geohash":"gcpuyrth8q2u51mqf7q2","qibla":119.05,"sun":{"rise":{"apparent":1553924400,"astronomical":1553917380,"civil":1553922360,"nautical":1553919960},"set":{"apparent":1553970600,"astronomical":1553977740,"civil":1553972640,"nautical":1553975100}},"timezone":{"name":"Europe/London","now_in_dst":0,"offset_sec":0,"offset_string":0,"short_name":"GMT"},"what3words":{"words":"\u0442\u0435\u043e\u0440\u0435\u0442\u0438\u043a.\u043d\u0430\u0434\u0435\u0436\u043d\u0430\u044f.\u043d\u0443\u0433\u0430"}},"bounds":{"northeast":{"lat":51.5020609,"lng":-0.0698503},"southwest":{"lat":51.5018878,"lng":-0.0703015}},"components":{"ISO_3166-1_alpha-2":"GB","ISO_3166-1_alpha-3":"GBR","_type":"building","building":"Reeds
+        Wharf","city":"\u041b\u043e\u043d\u0434\u043e\u043d","continent":"Europe","country":"\u0412\u0435\u043b\u0438\u043a\u043e\u0431\u0440\u0438\u0442\u0430\u043d\u0438\u044f","country_code":"gb","house_number":"33","political_union":"European
+        Union","postcode":"SE15","road":"Mill Street","state":"\u0410\u043d\u0433\u043b\u0438\u044f","state_district":"\u0411\u043e\u043b\u044c\u0448\u043e\u0439
+        \u041b\u043e\u043d\u0434\u043e\u043d","suburb":"Bermondsey"},"confidence":10,"formatted":"Reeds
+        Wharf, 33 Mill Street, \u041b\u043e\u043d\u0434\u043e\u043d SE15, \u0412\u0435\u043b\u0438\u043a\u043e\u0431\u0440\u0438\u0442\u0430\u043d\u0438\u044f","geometry":{"lat":51.5019664,"lng":-0.070026}}],"status":{"code":200,"message":"OK"},"stay_informed":{"blog":"https://blog.opencagedata.com","twitter":"https://twitter.com/opencagedata"},"thanks":"For
+        using an OpenCage Data API","timestamp":{"created_http":"Sat, 30 Mar 2019
+        14:46:18 GMT","created_unix":1553957178},"total_results":1}'
+    http_version: 
+  recorded_at: Sat, 30 Mar 2019 14:46:19 GMT
+recorded_with: VCR 4.0.0

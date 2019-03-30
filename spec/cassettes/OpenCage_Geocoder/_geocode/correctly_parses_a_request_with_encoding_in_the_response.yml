@@ -1,0 +1,76 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.opencagedata.com/geocode/v1/json?key=<OPEN_CAGE_API_KEY>&q=Donostia
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 30 Mar 2019 14:46:20 GMT
+      Server:
+      - Apache/2.4.29 (Ubuntu)
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ratelimit-Limit:
+      - '2500'
+      X-Ratelimit-Remaining:
+      - '2473'
+      X-Ratelimit-Reset:
+      - '1553990400'
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '{"documentation":"https://opencagedata.com/api","licenses":[{"name":"CC-BY-SA","url":"https://creativecommons.org/licenses/by-sa/3.0/"},{"name":"ODbL","url":"https://opendatacommons.org/licenses/odbl/summary/"}],"rate":{"limit":2500,"remaining":2473,"reset":1553990400},"results":[{"annotations":{"DMS":{"lat":"43\u00b0
+        19'' 20.71884'''' N","lng":"1\u00b0 59'' 2.00004'''' W"},"MGRS":"30TWN8238797121","Maidenhead":"IN93ah17wj","Mercator":{"x":-220845.502,"y":5331851.389},"OSM":{"edit_url":"https://www.openstreetmap.org/edit?relation=346465#map=17/43.32242/-1.98389","url":"https://www.openstreetmap.org/?mlat=43.32242&mlon=-1.98389#map=17/43.32242/-1.98389"},"callingcode":34,"currency":{"alternate_symbols":[],"decimal_mark":",","html_entity":"&#x20AC;","iso_code":"EUR","iso_numeric":978,"name":"Euro","smallest_denomination":1,"subunit":"Cent","subunit_to_unit":100,"symbol":"\u20ac","symbol_first":1,"thousands_separator":"."},"flag":"\ud83c\uddea\ud83c\uddf8","geohash":"ezww6ye7khc0yfz5ncr7","qibla":108.72,"sun":{"rise":{"apparent":1553925180,"astronomical":1553919300,"civil":1553923440,"nautical":1553921400},"set":{"apparent":1553970720,"astronomical":1553976600,"civil":1553972460,"nautical":1553974500}},"timezone":{"name":"Europe/Madrid","now_in_dst":0,"offset_sec":3600,"offset_string":100,"short_name":"CET"},"what3words":{"words":"orchids.wage.hints"},"wikidata":"Q10313"},"bounds":{"northeast":{"lat":43.3381594,"lng":-1.8878839},"southwest":{"lat":43.2178373,"lng":-2.0868082}},"components":{"ISO_3166-1_alpha-2":"ES","ISO_3166-1_alpha-3":"ESP","_type":"city","city":"San
+        Sebasti\u00e1n","continent":"Europe","country":"Spain","country_code":"es","county":"Gipuzkoa","political_union":"European
+        Union","state":"Basque Country"},"confidence":6,"formatted":"San Sebasti\u00e1n,
+        Basque Country, Spain","geometry":{"lat":43.3224219,"lng":-1.9838889}},{"annotations":{"DMS":{"lat":"43\u00b0
+        20'' 35.81700'''' N","lng":"1\u00b0 48'' 6.91992'''' W"},"MGRS":"30TWN9710899633","Maidenhead":"IN93ci32sj","Mercator":{"x":-200589.062,"y":5335032.59},"OSM":{"edit_url":"https://www.openstreetmap.org/edit?way=248880394#map=17/43.34328/-1.80192","url":"https://www.openstreetmap.org/?mlat=43.34328&mlon=-1.80192#map=17/43.34328/-1.80192"},"callingcode":34,"currency":{"alternate_symbols":[],"decimal_mark":",","html_entity":"&#x20AC;","iso_code":"EUR","iso_numeric":978,"name":"Euro","smallest_denomination":1,"subunit":"Cent","subunit_to_unit":100,"symbol":"\u20ac","symbol_first":1,"thousands_separator":"."},"flag":"\ud83c\uddea\ud83c\uddf8","geohash":"ezwwwfruujmrjt3byynp","qibla":108.92,"sun":{"rise":{"apparent":1553925120,"astronomical":1553919300,"civil":1553923440,"nautical":1553921400},"set":{"apparent":1553970660,"astronomical":1553976600,"civil":1553972400,"nautical":1553974440}},"timezone":{"name":"Europe/Madrid","now_in_dst":0,"offset_sec":3600,"offset_string":100,"short_name":"CET"},"what3words":{"words":"follow.opinion.sums"}},"bounds":{"northeast":{"lat":43.3449613,"lng":-1.8013447},"southwest":{"lat":43.3422299,"lng":-1.8022745}},"components":{"ISO_3166-1_alpha-2":"ES","ISO_3166-1_alpha-3":"ESP","_type":"road","continent":"Europe","country":"Spain","country_code":"es","county":"Gipuzkoa","political_union":"European
+        Union","postcode":"20301","road":"Donostia","road_type":"residential","state":"Basque
+        Country","suburb":"Anaka","town":"Irun"},"confidence":9,"formatted":"Donostia,
+        20301 Irun, Spain","geometry":{"lat":43.3432825,"lng":-1.8019222}},{"annotations":{"DMS":{"lat":"40\u00b0
+        43'' 36.08616'''' N","lng":"73\u00b0 58'' 47.62056'''' W"},"FIPS":{"county":"36061","state":"36"},"MGRS":"18TWL8614608918","Maidenhead":"FN30ar24jj","Mercator":{"x":-8235404.196,"y":4944227.12},"OSM":{"edit_url":"https://www.openstreetmap.org/edit?node=2567528714#map=17/40.72669/-73.97989","url":"https://www.openstreetmap.org/?mlat=40.72669&mlon=-73.97989#map=17/40.72669/-73.97989"},"callingcode":1,"currency":{"alternate_symbols":["US$"],"decimal_mark":".","disambiguate_symbol":"US$","html_entity":"$","iso_code":"USD","iso_numeric":840,"name":"United
+        States Dollar","smallest_denomination":1,"subunit":"Cent","subunit_to_unit":100,"symbol":"$","symbol_first":1,"thousands_separator":","},"flag":"\ud83c\uddfa\ud83c\uddf8","geohash":"dr5rsw16pt2ks211ugdk","qibla":58.5,"sun":{"rise":{"apparent":1553942460,"astronomical":1553936880,"civil":1553940840,"nautical":1553938860},"set":{"apparent":1553987880,"astronomical":1553907120,"civil":1553989560,"nautical":1553905140}},"timezone":{"name":"America/New_York","now_in_dst":1,"offset_sec":-14400,"offset_string":-400,"short_name":"EDT"},"what3words":{"words":"guides.scouts.showed"}},"bounds":{"northeast":{"lat":40.7267406,"lng":-73.9798446},"southwest":{"lat":40.7266406,"lng":-73.9799446}},"components":{"ISO_3166-1_alpha-2":"US","ISO_3166-1_alpha-3":"USA","_type":"restaurant","city":"New
+        York City","city_district":"Manhattan","continent":"North America","country":"USA","country_code":"us","county":"New
+        York County","footway":"Avenue B","house_number":"155","postcode":"10009","restaurant":"Donostia","state":"New
+        York","state_code":"NY","suburb":"Alphabet City"},"confidence":9,"formatted":"Donostia,
+        155 Avenue B, New York City, NY 10009, United States of America","geometry":{"lat":40.7266906,"lng":-73.9798946}},{"annotations":{"DMS":{"lat":"51\u00b0
+        30'' 52.92612'''' N","lng":"0\u00b0 9'' 39.55320'''' E"},"MGRS":"30UXC9698210885","Maidenhead":"IO91wm03qm","Mercator":{"x":-17920.991,"y":6679380.323},"OSGB":{"easting":527703.605,"gridref":"TQ
+        277 811","northing":181133.469},"OSM":{"edit_url":"https://www.openstreetmap.org/edit?node=2305429059#map=17/51.51470/-0.16099","url":"https://www.openstreetmap.org/?mlat=51.51470&mlon=-0.16099#map=17/51.51470/-0.16099"},"callingcode":44,"currency":{"alternate_symbols":[],"decimal_mark":".","html_entity":"&#x00A3;","iso_code":"GBP","iso_numeric":826,"name":"British
+        Pound","smallest_denomination":1,"subunit":"Penny","subunit_to_unit":100,"symbol":"\u00a3","symbol_first":1,"thousands_separator":","},"flag":"\ud83c\uddec\ud83c\udde7","geohash":"gcpvh3fybsrmkecb2qtd","qibla":118.96,"sun":{"rise":{"apparent":1553924400,"astronomical":1553917380,"civil":1553922420,"nautical":1553919960},"set":{"apparent":1553970660,"astronomical":1553977740,"civil":1553972700,"nautical":1553975100}},"timezone":{"name":"Europe/London","now_in_dst":0,"offset_sec":0,"offset_string":0,"short_name":"GMT"},"what3words":{"words":"strain.priced.short"}},"bounds":{"northeast":{"lat":51.5147517,"lng":-0.160937},"southwest":{"lat":51.5146517,"lng":-0.161037}},"components":{"ISO_3166-1_alpha-2":"GB","ISO_3166-1_alpha-3":"GBR","_type":"restaurant","city":"London","continent":"Europe","country":"United
+        Kingdom","country_code":"gb","county":"Westminster","county_code":"WSM","house_number":"10","political_union":"European
+        Union","postcode":"W1H 7NL","restaurant":"Donostia","road":"Seymour Place","state":"England","state_code":"ENG","state_district":"Greater
+        London","suburb":"Marylebone"},"confidence":9,"formatted":"Donostia, 10 Seymour
+        Place, London W1H 7NL, United Kingdom","geometry":{"lat":51.5147017,"lng":-0.160987}},{"annotations":{"DMS":{"lat":"43\u00b0
+        19'' 8.83344'''' N","lng":"2\u00b0 0'' 22.97484'''' W"},"MGRS":"30TWN8056896732","Maidenhead":"IN83xh96fo","Mercator":{"x":-223349.411,"y":5331348.017},"OSM":{"edit_url":"https://www.openstreetmap.org/edit?node=418624071#map=17/43.31912/-2.00638","url":"https://www.openstreetmap.org/?mlat=43.31912&mlon=-2.00638#map=17/43.31912/-2.00638"},"callingcode":34,"currency":{"alternate_symbols":[],"decimal_mark":",","html_entity":"&#x20AC;","iso_code":"EUR","iso_numeric":978,"name":"Euro","smallest_denomination":1,"subunit":"Cent","subunit_to_unit":100,"symbol":"\u20ac","symbol_first":1,"thousands_separator":"."},"flag":"\ud83c\uddea\ud83c\uddf8","geohash":"ezww6q4bpvm4x5fzk0xs","qibla":108.7,"sun":{"rise":{"apparent":1553925180,"astronomical":1553919300,"civil":1553923500,"nautical":1553921460},"set":{"apparent":1553970720,"astronomical":1553976660,"civil":1553972460,"nautical":1553974500}},"timezone":{"name":"Europe/Madrid","now_in_dst":0,"offset_sec":3600,"offset_string":100,"short_name":"CET"},"what3words":{"words":"family.lows.inhales"}},"bounds":{"northeast":{"lat":43.3191704,"lng":-2.0063319},"southwest":{"lat":43.3190704,"lng":-2.0064319}},"components":{"ISO_3166-1_alpha-2":"ES","ISO_3166-1_alpha-3":"ESP","_type":"halt","city":"San
+        Sebasti\u00e1n","continent":"Europe","country":"Spain","country_code":"es","county":"Gipuzkoa","halt":"Donostia","political_union":"European
+        Union","postcode":"20018","road":"Funikularraren Plaza","state":"Basque Country","suburb":"Antiguo"},"confidence":9,"formatted":"Donostia,
+        Funikularraren Plaza, 20018 San Sebasti\u00e1n, Spain","geometry":{"lat":43.3191204,"lng":-2.0063819}},{"annotations":{"DMS":{"lat":"43\u00b0
+        19'' 23.55924'''' N","lng":"1\u00b0 59'' 18.48660'''' W"},"MGRS":"30TWN8201597204","Maidenhead":"IN93ah17jn","Mercator":{"x":-221355.3,"y":5331971.69},"OSM":{"edit_url":"https://www.openstreetmap.org/edit?way=565482772#map=17/43.32321/-1.98847","url":"https://www.openstreetmap.org/?mlat=43.32321&mlon=-1.98847#map=17/43.32321/-1.98847"},"callingcode":34,"currency":{"alternate_symbols":[],"decimal_mark":",","html_entity":"&#x20AC;","iso_code":"EUR","iso_numeric":978,"name":"Euro","smallest_denomination":1,"subunit":"Cent","subunit_to_unit":100,"symbol":"\u20ac","symbol_first":1,"thousands_separator":"."},"flag":"\ud83c\uddea\ud83c\uddf8","geohash":"ezww6y8pcrf7mt41h837","qibla":108.72,"sun":{"rise":{"apparent":1553925180,"astronomical":1553919300,"civil":1553923440,"nautical":1553921400},"set":{"apparent":1553970720,"astronomical":1553976600,"civil":1553972460,"nautical":1553974500}},"timezone":{"name":"Europe/Madrid","now_in_dst":0,"offset_sec":3600,"offset_string":100,"short_name":"CET"},"what3words":{"words":"ensemble.trucks.charted"}},"bounds":{"northeast":{"lat":43.3235144,"lng":-1.987835},"southwest":{"lat":43.3227734,"lng":-1.9895938}},"components":{"ISO_3166-1_alpha-2":"ES","ISO_3166-1_alpha-3":"ESP","_type":"marina","city":"San
+        Sebasti\u00e1n","continent":"Europe","country":"Spain","country_code":"es","county":"Gipuzkoa","marina":"Donostia","pedestrian":"Kaiko
+        Pasealekua","political_union":"European Union","postcode":"20018","state":"Basque
+        Country","suburb":"Parte Zaharra"},"confidence":9,"formatted":"Donostia, Kaiko
+        Pasealekua, 20018 San Sebasti\u00e1n, Spain","geometry":{"lat":43.3232109,"lng":-1.9884685}}],"status":{"code":200,"message":"OK"},"stay_informed":{"blog":"https://blog.opencagedata.com","twitter":"https://twitter.com/opencagedata"},"thanks":"For
+        using an OpenCage Data API","timestamp":{"created_http":"Sat, 30 Mar 2019
+        14:46:20 GMT","created_unix":1553957180},"total_results":6}'
+    http_version: 
+  recorded_at: Sat, 30 Mar 2019 14:46:20 GMT
+recorded_with: VCR 4.0.0
