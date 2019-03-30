@@ -43,10 +43,10 @@ describe OpenCage::Geocoder do
       ).to match('Лондон SE15, Великобритания')
     end
 
-    it 'raises an error for badly formed input' do
+    it 'raises an error for non-numeric input' do
       expect do
         geo.reverse_geocode('NOT-A-COORD', 51.50934)
-      end.to raise_error('invalid value for Float(): "NOT-A-COORD"')
+      end.to raise_error(OpenCage::Geocoder::GeocodingError, 'not valid numeric coordinates: "NOT-A-COORD", 51.50934')
     end
   end
 
