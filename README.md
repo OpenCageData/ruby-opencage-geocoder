@@ -21,7 +21,8 @@ gem 'opencage-geocoder'
 
 ## Documentation
 
-Complete documentation for the geocding API can be found at [opencagedata.com/api](https://opencagedata.com/api).
+Complete documentation for the OpenCage geocoding API can be found at
+[opencagedata.com/api](https://opencagedata.com/api).
 
 ## Usage
 
@@ -48,7 +49,7 @@ results.each { |res| p res.address }
 # "Manchester, CT 06042, United States of America"
 # ...
 
-# We want the city in Canada and results in Japanease
+# We want the city in Canada and results in Japanese
 results = geocoder.geocode('Manchester', country_code: 'CA', language: 'ja')
 p results.first.address
 # "Manchester, ノバスコシア州, カナダ"
@@ -85,6 +86,59 @@ complete list of annotations.
 result = geocoder.reverse_geocode(-22.6792, 14.5272)
 p result.annotations['geohash']
 # "k7fqfx6h5jbq5tn8tnpn"
+```
+
+### Error handling
+
+The geocoder will return an `OpenCage::Geocoder::GeocodingError` if there is a
+problem with either input or response, for example:
+
+```ruby
+# Invalid API key
+geocoder =  OpenCage::Geocoder.new(api_key: 'invalid-api-key')
+geocoder.geocode('Manchester')
+# OpenCage::Geocoder::GeocodingError (invalid API key)
+
+# Using strings instead of numbers for reverse geocoding
+geocoder.reverse_geocode('51.5019951', '-0.0698806')
+# OpenCage::Geocoder::GeocodingError (not valid numeric coordinates: "51.5019951", "-0.0698806")
+```
+
+### Batch geocoding
+
+Fill a text file `queries.txt` with queries:
+
+```
+24.77701,121.02189
+31.79261,35.21785
+9.54828,44.07715
+59.92903,30.32989
+```
+
+Then loop through the file:
+
+```ruby
+geocoder = OpenCage::Geocoder.new(api_key: 'your-api-key-here')
+
+results = []
+File.foreach('queries.txt') do |line|
+  lat, lng = line.chomp.split(',')
+
+  # Use Float() rather than #to_f because it will throw an ArgumentError if
+  # there is an invalid line in the queries.txt file
+  result = geocoder.reverse_geocode(Float(lat), Float(lng))
+  results.push(result)
+rescue ArgumentError, OpenCage::Geocoder::GeocodingError => error
+  # Stop looping through the queries if there is an error
+  puts "Error: #{error.message}"
+  break
+end
+
+puts results.map(&:address)
+# 韓國館, 金山十一街, 金山里, Hsinchu 30082, Taiwan
+# David Hazan 11, NO Jerusalem, Israel
+# هرجيسا, Jameeco Weyn, Hargeisa, Somalia
+# Китайское бистро, Apraksin Yard, Михайловский проезд ...
 ```
 
 ## Upgrading from version 0.1x
