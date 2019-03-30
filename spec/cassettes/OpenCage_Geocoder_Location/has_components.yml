@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.opencagedata.com/geocode/v1/json?key=<API_KEY>&q=-22.6792,14.5272
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 30 Mar 2019 17:06:16 GMT
+      Server:
+      - Apache/2.4.29 (Ubuntu)
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ratelimit-Limit:
+      - '2500'
+      X-Ratelimit-Remaining:
+      - '2460'
+      X-Ratelimit-Reset:
+      - '1553990400'
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '{"documentation":"https://opencagedata.com/api","licenses":[{"name":"CC-BY-SA","url":"https://creativecommons.org/licenses/by-sa/3.0/"},{"name":"ODbL","url":"https://opendatacommons.org/licenses/odbl/summary/"}],"rate":{"limit":2500,"remaining":2460,"reset":1553990400},"results":[{"annotations":{"DMS":{"lat":"22\u00b0
+        40'' 45.05736'''' S","lng":"14\u00b0 31'' 36.48576'''' E"},"MGRS":"33KVQ5139191916","Maidenhead":"JG77gh36fx","Mercator":{"x":1617116.157,"y":-2576798.589},"OSM":{"edit_url":"https://www.openstreetmap.org/edit?node=4488973891#map=17/-22.67918/14.52680","url":"https://www.openstreetmap.org/?mlat=-22.67918&mlon=14.52680#map=17/-22.67918/14.52680"},"callingcode":264,"currency":{"alternate_symbols":["N$"],"decimal_mark":".","disambiguate_symbol":"N$","html_entity":"$","iso_code":"NAD","iso_numeric":516,"name":"Namibian
+        Dollar","smallest_denomination":5,"subunit":"Cent","subunit_to_unit":100,"symbol":"$","symbol_first":0,"thousands_separator":","},"flag":"\ud83c\uddf3\ud83c\udde6","geohash":"k7fqfx6h5jbq5tn8tnpn","qibla":31.02,"sun":{"rise":{"apparent":1553922540,"astronomical":1553918100,"civil":1553921220,"nautical":1553919660},"set":{"apparent":1553965380,"astronomical":1553969880,"civil":1553966760,"nautical":1553968320}},"timezone":{"name":"Africa/Windhoek","now_in_dst":0,"offset_sec":7200,"offset_string":200,"short_name":"CAT"},"what3words":{"words":"integrate.laughter.teller"}},"bounds":{"northeast":{"lat":-22.6790826,"lng":14.5269016},"southwest":{"lat":-22.6792826,"lng":14.5267016}},"components":{"ISO_3166-1_alpha-2":"NA","ISO_3166-1_alpha-3":"NAM","_type":"restaurant","city":"Swakopmund","continent":"Africa","country":"Namibia","country_code":"na","restaurant":"Beryl''s
+        Restaurant","road":"Woermann St","state":"Erongo Region","suburb":"Central"},"confidence":9,"formatted":"Beryl''s
+        Restaurant, Woermann St, Swakopmund, Namibia","geometry":{"lat":-22.6791826,"lng":14.5268016}}],"status":{"code":200,"message":"OK"},"stay_informed":{"blog":"https://blog.opencagedata.com","twitter":"https://twitter.com/opencagedata"},"thanks":"For
+        using an OpenCage Data API","timestamp":{"created_http":"Sat, 30 Mar 2019
+        17:06:16 GMT","created_unix":1553965576},"total_results":1}'
+    http_version: 
+  recorded_at: Sat, 30 Mar 2019 17:06:16 GMT
+recorded_with: VCR 4.0.0

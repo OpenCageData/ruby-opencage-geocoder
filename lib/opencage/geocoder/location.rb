@@ -9,6 +9,14 @@ module OpenCage
         @result
       end
 
+      def address
+        @result['formatted']
+      end
+
+      def coordinates
+        [lat, lng]
+      end
+
       def lat
         @result['geometry']['lat'].to_f
       end
@@ -21,12 +29,12 @@ module OpenCage
         @result['components']
       end
 
-      def address
-        @result['formatted']
+      def annotations
+        @result['annotations']
       end
 
-      def coordinates
-        [lat, lng]
+      def confidence
+        @result['confidence']
       end
     end
   end

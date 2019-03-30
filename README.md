@@ -19,6 +19,10 @@ source 'https://rubygems.org'
 gem 'opencage-geocoder'
 ```
 
+## Documentation
+
+Complete documentation for the geocding API can be found at [opencagedata.com/api](https://opencagedata.com/api).
+
 ## Usage
 
 Create an instance of the geocoder, passing a valid OpenCage Data Geocoder API key:
@@ -70,6 +74,17 @@ result = geocoder.reverse_geocode(51.5019951, -0.0698806)
 p result.address
 # 'Bermondsey Wall West, Bermondsey, London Boro ...
 
+```
+
+### Annotations
+
+See the [API documentation](https://opencagedata.com/api#annotations) for a
+complete list of annotations.
+
+```ruby
+result = geocoder.reverse_geocode(-22.6792, 14.5272)
+p result.annotations['geohash']
+# "k7fqfx6h5jbq5tn8tnpn"
 ```
 
 ## Upgrading from version 0.1x
