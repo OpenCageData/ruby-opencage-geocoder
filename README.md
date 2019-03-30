@@ -89,4 +89,4 @@ geocoder.reverse_geocode(50, 7).address # Version 2
 
 ## Copyright
 
-Copyright (c) 2018 OpenCage Data Ltd. See LICENSE for details.
+Copyright (c) 2019 OpenCage Data Ltd. See LICENSE for details.
