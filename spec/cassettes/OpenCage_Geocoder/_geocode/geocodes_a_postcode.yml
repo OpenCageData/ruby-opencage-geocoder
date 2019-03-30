@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.opencagedata.com/geocode/v1/json?key=<OPEN_CAGE_API_KEY>&q=EC1M%205RF
+    uri: https://api.opencagedata.com/geocode/v1/json?key=<API_KEY>&q=EC1M%205RF
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 30 Mar 2019 14:46:19 GMT
+      - Sat, 30 Mar 2019 15:11:19 GMT
       Server:
       - Apache/2.4.29 (Ubuntu)
       Access-Control-Allow-Origin:
@@ -27,7 +27,7 @@ http_interactions:
       X-Ratelimit-Limit:
       - '2500'
       X-Ratelimit-Remaining:
-      - '2475'
+      - '2468'
       X-Ratelimit-Reset:
       - '1553990400'
       Transfer-Encoding:
@@ -38,7 +38,7 @@ http_interactions:
       - max-age=31536000; includeSubDomains
     body:
       encoding: UTF-8
-      string: '{"documentation":"https://opencagedata.com/api","licenses":[{"name":"CC-BY-SA","url":"https://creativecommons.org/licenses/by-sa/3.0/"},{"name":"ODbL","url":"https://opendatacommons.org/licenses/odbl/summary/"}],"rate":{"limit":2500,"remaining":2475,"reset":1553990400},"results":[{"annotations":{"DMS":{"lat":"51\u00b0
+      string: '{"documentation":"https://opencagedata.com/api","licenses":[{"name":"CC-BY-SA","url":"https://creativecommons.org/licenses/by-sa/3.0/"},{"name":"ODbL","url":"https://opendatacommons.org/licenses/odbl/summary/"}],"rate":{"limit":2500,"remaining":2468,"reset":1553990400},"results":[{"annotations":{"DMS":{"lat":"51\u00b0
         31'' 21.63360'''' N","lng":"0\u00b0 6'' 9.17640'''' E"},"MGRS":"30UYC0100011931","Maidenhead":"IO91wm75qk","Mercator":{"x":-11415.702,"y":6680803.177},"OSGB":{"easting":531735.212,"gridref":"TQ
         317 821","northing":182123.71},"OSM":{"url":"https://www.openstreetmap.org/?mlat=51.52268&mlon=-0.10255#map=17/51.52268/-0.10255"},"callingcode":44,"currency":{"alternate_symbols":[],"decimal_mark":".","html_entity":"&#x00A3;","iso_code":"GBP","iso_numeric":826,"name":"British
         Pound","smallest_denomination":1,"subunit":"Penny","subunit_to_unit":100,"symbol":"\u00a3","symbol_first":1,"thousands_separator":","},"flag":"\ud83c\uddec\ud83c\udde7","geohash":"gcpvjemm66vvvt3w1fep","qibla":119.03,"sun":{"rise":{"apparent":1553924400,"astronomical":1553917380,"civil":1553922360,"nautical":1553919960},"set":{"apparent":1553970660,"astronomical":1553977740,"civil":1553972700,"nautical":1553975100}},"timezone":{"name":"Europe/London","now_in_dst":0,"offset_sec":0,"offset_string":0,"short_name":"GMT"},"what3words":{"words":"fruit.slices.scouts"}},"components":{"ISO_3166-1_alpha-2":"GB","ISO_3166-1_alpha-3":"GBR","_type":"neighbourhood","continent":"Europe","country":"United
@@ -46,7 +46,7 @@ http_interactions:
         5RF","region":"London","state":"England","state_code":"ENG","suburb":"Clerkenwell","town":"Islington"},"confidence":10,"formatted":"Islington
         EC1M 5RF, United Kingdom","geometry":{"lat":51.522676,"lng":-0.102549}}],"status":{"code":200,"message":"OK"},"stay_informed":{"blog":"https://blog.opencagedata.com","twitter":"https://twitter.com/opencagedata"},"thanks":"For
         using an OpenCage Data API","timestamp":{"created_http":"Sat, 30 Mar 2019
-        14:46:19 GMT","created_unix":1553957179},"total_results":1}'
+        15:11:19 GMT","created_unix":1553958679},"total_results":1}'
     http_version: 
-  recorded_at: Sat, 30 Mar 2019 14:46:19 GMT
+  recorded_at: Sat, 30 Mar 2019 15:11:19 GMT
 recorded_with: VCR 4.0.0

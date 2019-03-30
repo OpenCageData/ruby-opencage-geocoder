@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.opencagedata.com/geocode/v1/json?key=<OPEN_CAGE_API_KEY>&q=Mudgee,%20Australia
+    uri: https://api.opencagedata.com/geocode/v1/json?key=<API_KEY>&q=Mudgee,%20Australia
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 30 Mar 2019 14:46:19 GMT
+      - Sat, 30 Mar 2019 15:11:19 GMT
       Server:
       - Apache/2.4.29 (Ubuntu)
       Access-Control-Allow-Origin:
@@ -27,7 +27,7 @@ http_interactions:
       X-Ratelimit-Limit:
       - '2500'
       X-Ratelimit-Remaining:
-      - '2476'
+      - '2469'
       X-Ratelimit-Reset:
       - '1553990400'
       Transfer-Encoding:
@@ -38,7 +38,7 @@ http_interactions:
       - max-age=31536000; includeSubDomains
     body:
       encoding: UTF-8
-      string: '{"documentation":"https://opencagedata.com/api","licenses":[{"name":"CC-BY-SA","url":"https://creativecommons.org/licenses/by-sa/3.0/"},{"name":"ODbL","url":"https://opendatacommons.org/licenses/odbl/summary/"}],"rate":{"limit":2500,"remaining":2476,"reset":1553990400},"results":[{"annotations":{"DMS":{"lat":"32\u00b0
+      string: '{"documentation":"https://opencagedata.com/api","licenses":[{"name":"CC-BY-SA","url":"https://creativecommons.org/licenses/by-sa/3.0/"},{"name":"ODbL","url":"https://opendatacommons.org/licenses/odbl/summary/"}],"rate":{"limit":2500,"remaining":2469,"reset":1553990400},"results":[{"annotations":{"DMS":{"lat":"32\u00b0
         35'' 53.05272'''' S","lng":"149\u00b0 35'' 19.09788'''' E"},"MGRS":"55HGD4294590311","Maidenhead":"QF47tj06pl","Mercator":{"x":16652131.044,"y":-3819057.258},"OSM":{"edit_url":"https://www.openstreetmap.org/edit?relation=6059167#map=17/-32.59807/149.58864","url":"https://www.openstreetmap.org/?mlat=-32.59807&mlon=149.58864#map=17/-32.59807/149.58864"},"callingcode":61,"currency":{"alternate_symbols":["A$"],"decimal_mark":".","disambiguate_symbol":"A$","html_entity":"$","iso_code":"AUD","iso_numeric":36,"name":"Australian
         Dollar","smallest_denomination":5,"subunit":"Cent","subunit_to_unit":100,"symbol":"$","symbol_first":1,"thousands_separator":","},"flag":"\ud83c\udde6\ud83c\uddfa","geohash":"r64qecxn7zm0uv6bnz7m","qibla":278.96,"sun":{"rise":{"apparent":1553976780,"astronomical":1553971860,"civil":1553975340,"nautical":1553973600},"set":{"apparent":1553932920,"astronomical":1553937840,"civil":1553934420,"nautical":1553936100}},"timezone":{"name":"Australia/Sydney","now_in_dst":1,"offset_sec":39600,"offset_string":1100,"short_name":"AEDT"},"what3words":{"words":"fluffs.photocopier.cobbles"},"wikidata":"Q59819"},"bounds":{"northeast":{"lat":-32.5713535,"lng":149.6091869},"southwest":{"lat":-32.6539627,"lng":149.5470486}},"components":{"ISO_3166-1_alpha-2":"AU","ISO_3166-1_alpha-3":"AUS","_type":"village","continent":"Oceania","country":"Australia","country_code":"au","county":"Mid-Western
         Regional Council","hamlet":"Bombira","postcode":"2850","state":"New South
@@ -54,7 +54,7 @@ http_interactions:
         SOUTH WALES","state_code":"NSW","street":"MARKET ST"},"confidence":10,"formatted":"46
         MARKET ST, MUDGEE NSW 2850, Australia","geometry":{"lat":-32.5908728,"lng":149.58978}}],"status":{"code":200,"message":"OK"},"stay_informed":{"blog":"https://blog.opencagedata.com","twitter":"https://twitter.com/opencagedata"},"thanks":"For
         using an OpenCage Data API","timestamp":{"created_http":"Sat, 30 Mar 2019
-        14:46:19 GMT","created_unix":1553957179},"total_results":3}'
+        15:11:19 GMT","created_unix":1553958679},"total_results":3}'
     http_version: 
-  recorded_at: Sat, 30 Mar 2019 14:46:19 GMT
+  recorded_at: Sat, 30 Mar 2019 15:11:19 GMT
 recorded_with: VCR 4.0.0

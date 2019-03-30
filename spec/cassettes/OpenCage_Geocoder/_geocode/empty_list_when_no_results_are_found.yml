@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.opencagedata.com/geocode/v1/json?key=<OPEN_CAGE_API_KEY>&q=NOWHERE-INTERESTING
+    uri: https://api.opencagedata.com/geocode/v1/json?key=<API_KEY>&q=NOWHERE-INTERESTING
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 30 Mar 2019 14:46:20 GMT
+      - Sat, 30 Mar 2019 15:11:20 GMT
       Server:
       - Apache/2.4.29 (Ubuntu)
       Access-Control-Allow-Origin:
@@ -27,7 +27,7 @@ http_interactions:
       X-Ratelimit-Limit:
       - '2500'
       X-Ratelimit-Remaining:
-      - '2472'
+      - '2465'
       X-Ratelimit-Reset:
       - '1553990400'
       Transfer-Encoding:
@@ -38,9 +38,9 @@ http_interactions:
       - max-age=31536000; includeSubDomains
     body:
       encoding: UTF-8
-      string: '{"documentation":"https://opencagedata.com/api","licenses":[{"name":"CC-BY-SA","url":"https://creativecommons.org/licenses/by-sa/3.0/"},{"name":"ODbL","url":"https://opendatacommons.org/licenses/odbl/summary/"}],"rate":{"limit":2500,"remaining":2472,"reset":1553990400},"results":[],"status":{"code":200,"message":"OK"},"stay_informed":{"blog":"https://blog.opencagedata.com","twitter":"https://twitter.com/opencagedata"},"thanks":"For
+      string: '{"documentation":"https://opencagedata.com/api","licenses":[{"name":"CC-BY-SA","url":"https://creativecommons.org/licenses/by-sa/3.0/"},{"name":"ODbL","url":"https://opendatacommons.org/licenses/odbl/summary/"}],"rate":{"limit":2500,"remaining":2465,"reset":1553990400},"results":[],"status":{"code":200,"message":"OK"},"stay_informed":{"blog":"https://blog.opencagedata.com","twitter":"https://twitter.com/opencagedata"},"thanks":"For
         using an OpenCage Data API","timestamp":{"created_http":"Sat, 30 Mar 2019
-        14:46:20 GMT","created_unix":1553957180},"total_results":0}'
+        15:11:20 GMT","created_unix":1553958680},"total_results":0}'
     http_version: 
-  recorded_at: Sat, 30 Mar 2019 14:46:20 GMT
+  recorded_at: Sat, 30 Mar 2019 15:11:20 GMT
 recorded_with: VCR 4.0.0

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.opencagedata.com/geocode/v1/json?key=<OPEN_CAGE_API_KEY>&q=M%C3%BCnster
+    uri: https://api.opencagedata.com/geocode/v1/json?key=<API_KEY>&q=M%C3%BCnster
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 30 Mar 2019 14:46:19 GMT
+      - Sat, 30 Mar 2019 15:11:19 GMT
       Server:
       - Apache/2.4.29 (Ubuntu)
       Access-Control-Allow-Origin:
@@ -27,7 +27,7 @@ http_interactions:
       X-Ratelimit-Limit:
       - '2500'
       X-Ratelimit-Remaining:
-      - '2474'
+      - '2467'
       X-Ratelimit-Reset:
       - '1553990400'
       Transfer-Encoding:
@@ -38,7 +38,7 @@ http_interactions:
       - max-age=31536000; includeSubDomains
     body:
       encoding: UTF-8
-      string: '{"documentation":"https://opencagedata.com/api","licenses":[{"name":"CC-BY-SA","url":"https://creativecommons.org/licenses/by-sa/3.0/"},{"name":"ODbL","url":"https://opendatacommons.org/licenses/odbl/summary/"}],"rate":{"limit":2500,"remaining":2474,"reset":1553990400},"results":[{"annotations":{"DMS":{"lat":"51\u00b0
+      string: '{"documentation":"https://opencagedata.com/api","licenses":[{"name":"CC-BY-SA","url":"https://creativecommons.org/licenses/by-sa/3.0/"},{"name":"ODbL","url":"https://opendatacommons.org/licenses/odbl/summary/"}],"rate":{"limit":2500,"remaining":2467,"reset":1553990400},"results":[{"annotations":{"DMS":{"lat":"51\u00b0
         57'' 0.47412'''' N","lng":"7\u00b0 36'' 47.88612'''' E"},"MGRS":"32UMC0469856399","Maidenhead":"JO31tw38oa","Mercator":{"x":847508.863,"y":6757443.668},"OSM":{"edit_url":"https://www.openstreetmap.org/edit?relation=62591#map=17/51.95013/7.61330","url":"https://www.openstreetmap.org/?mlat=51.95013&mlon=7.61330#map=17/51.95013/7.61330"},"callingcode":49,"currency":{"alternate_symbols":[],"decimal_mark":",","html_entity":"&#x20AC;","iso_code":"EUR","iso_numeric":978,"name":"Euro","smallest_denomination":1,"subunit":"Cent","subunit_to_unit":100,"symbol":"\u20ac","symbol_first":1,"thousands_separator":"."},"flag":"\ud83c\udde9\ud83c\uddea","geohash":"u1jrt1pz6y3nmrg052c6","qibla":128.53,"sun":{"rise":{"apparent":1553922540,"astronomical":1553915400,"civil":1553920500,"nautical":1553918040},"set":{"apparent":1553968800,"astronomical":1553976000,"civil":1553970840,"nautical":1553973360}},"timezone":{"name":"Europe/Berlin","now_in_dst":0,"offset_sec":3600,"offset_string":100,"short_name":"CET"},"what3words":{"words":"timeless.rankings.fuels"},"wikidata":"Q2742"},"bounds":{"northeast":{"lat":52.0600251,"lng":7.7743634},"southwest":{"lat":51.8401448,"lng":7.4737853}},"components":{"ISO_3166-1_alpha-2":"DE","ISO_3166-1_alpha-3":"DEU","_type":"county","continent":"Europe","country":"Germany","country_code":"de","county":"M\u00fcnster","political_union":"European
         Union","state":"North Rhine-Westphalia","state_district":"Regierungsbezirk
         M\u00fcnster"},"confidence":4,"formatted":"M\u00fcnster, North Rhine-Westphalia,
@@ -79,7 +79,7 @@ http_interactions:
         Bavaria","village":"M\u00fcnster"},"confidence":7,"formatted":"94377 M\u00fcnster,
         Germany","geometry":{"lat":48.9528073,"lng":12.5729086}}],"status":{"code":200,"message":"OK"},"stay_informed":{"blog":"https://blog.opencagedata.com","twitter":"https://twitter.com/opencagedata"},"thanks":"For
         using an OpenCage Data API","timestamp":{"created_http":"Sat, 30 Mar 2019
-        14:46:19 GMT","created_unix":1553957179},"total_results":10}'
+        15:11:19 GMT","created_unix":1553958679},"total_results":10}'
     http_version: 
-  recorded_at: Sat, 30 Mar 2019 14:46:20 GMT
+  recorded_at: Sat, 30 Mar 2019 15:11:19 GMT
 recorded_with: VCR 4.0.0
