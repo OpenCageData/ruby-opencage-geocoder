@@ -5,8 +5,6 @@ require 'vcr'
 
 ENV['OPEN_CAGE_API_KEY'] ||= 'API_KEY'
 
-THIRTY_DAYS = 30 * 24 * 60 * 60
-
 VCR.configure do |config|
   config.cassette_library_dir = 'spec/cassettes'
   config.hook_into :webmock
