@@ -86,6 +86,8 @@ complete list of annotations.
 result = geocoder.reverse_geocode(-22.6792, 14.5272)
 p result.annotations['geohash']
 # "k7fqfx6h5jbq5tn8tnpn"
+p result.annotations['timezone']
+# {"timezone"=>{"name"=>"Africa/Windhoek", "now_in_dst"=>0, "offset_sec"=>7200, "offset_string"=>200, "short_name"=>"CAT"}}
 ```
 
 ### Error handling
