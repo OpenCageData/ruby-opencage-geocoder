@@ -1,3 +1,10 @@
+2.1.0 - Sun 31 Mar 2018
+===============================================================
+- test suite now uses pre-recorded API responses (VCR casettes)
+- exception handling for 402 'over quota' error responses
+- add example about batch processing in README
+- various updates to documentation, reformatting text
+
 2.0.0 - Mon 31 Dec 2018
 ===============================================================
 - geocode method now returns multiple results, not just one
