@@ -26,7 +26,7 @@ Complete documentation for the OpenCage geocoding API can be found at
 
 ## Usage
 
-Create an instance of the geocoder, passing a valid OpenCage Data Geocoder API key:
+Create an instance of the geocoder, passing a valid OpenCage Geocoder API key:
 
 ```ruby
 require 'opencage/geocoder'
