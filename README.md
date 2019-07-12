@@ -4,7 +4,7 @@
 
 # OpenCage Geocoder
 
-A Ruby client for the [OpenCage Data](https://opencagedata.com/) geocoding API.
+A Ruby client for the [OpenCage](https://opencagedata.com/) geocoding API.
 
 ## Installation
 
@@ -160,4 +160,4 @@ geocoder.reverse_geocode(50, 7).address # Version 2
 
 ## Copyright
 
-Copyright (c) 2019 OpenCage Data Ltd. See LICENSE for details.
+Copyright (c) 2019 OpenCage GmbH. See LICENSE for details.
