@@ -32,8 +32,8 @@ module OpenCage
 
     def fetch(url)
       JSON.parse(URI(url).open.read)['results']
-    rescue OpenURI::HTTPError => error
-      raise GeocodingError, error_message(error)
+    rescue OpenURI::HTTPError => e
+      raise GeocodingError, error_message(e)
     end
 
     def error_message(error)

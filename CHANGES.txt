@@ -1,3 +1,7 @@
+2.1.2 - Sat Feb 29 2020
+===============================================================
+- various Ruby gem updates, newest Rubocop
+
 2.1.0 - Sun 31 Mar 2018
 ===============================================================
 - test suite now uses pre-recorded API responses (VCR casettes)
