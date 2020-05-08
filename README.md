@@ -2,11 +2,13 @@
 
 A Ruby client for the [OpenCage](https://opencagedata.com/) geocoding API.
 
-## Build status
+## Build status / Code quality / etc
 
 [![Build Status](https://travis-ci.org/OpenCageData/ruby-opencage-geocoder.svg?branch=master)](https://travis-ci.org/OpenCageData/ruby-opencage-geocoder)
 [![Kritika Analysis Status](https://kritika.io/users/freyfogle/repos/3990778871294442/heads/master/status.svg)](https://kritika.io/users/freyfogle/repos/3990778871294442/heads/master/)
 [![Gem Version](https://badge.fury.io/rb/opencage-geocoder.svg)](https://badge.fury.io/rb/opencage-geocoder)
+[![security status](https://www.meterian.com/badge/gh/OpenCageData/ruby-opencage-geocoder/security)](https://www.meterian.com/report/gh/OpenCageData/ruby-opencage-geocoder)
+[![stability status](https://www.meterian.com/badge/gh/OpenCageData/ruby-opencage-geocoder/stability)](https://www.meterian.com/report/gh/OpenCageData/ruby-opencage-geocoder)
 
 ## Installation
 
