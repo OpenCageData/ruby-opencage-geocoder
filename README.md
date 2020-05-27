@@ -52,7 +52,7 @@ results.each { |res| p res.address }
 # ...
 
 # We want the city in Canada and results in Japanese
-results = geocoder.geocode('Manchester', country_code: 'CA', language: 'ja')
+results = geocoder.geocode('Manchester', countrycode: 'CA', language: 'ja')
 p results.first.address
 # "Manchester, ノバスコシア州, カナダ"
 p results.first.components
