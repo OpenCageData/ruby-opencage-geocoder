@@ -1,12 +1,15 @@
 language: ruby
 rvm:
-  - 2.4
-  - 2.5
-  - 2.6
-  - 2.7  
+- 2.4
+- 2.5
+- 2.6
+- 2.7
 install:
-  - gem update --system --silent
-  - gem install bundler
-  - bundle install
+- gem update --system --silent
+- gem install bundler
+- bundle install
 script:
-  - rspec
+- rspec
+notifications:
+  slack:
+    secure: iCWcf+492kDv6FzeU2hnbLTDKh1lQDwpYJNVswhc6Hi2xQvl1bww+TVjS8JawPO6MkBq6oHvl99MIAznEX7btgwK9Me6Sagk4LDuWItlkedFOX3CMZcSBvreX/Dvp5/qi04Eqdk3ED+xKvXNeuz3nd4MngtfJA6wB5oRoOt1JhA=
