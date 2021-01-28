@@ -1,5 +1,6 @@
 AllCops:
-  TargetRubyVersion: 2.5
+  TargetRubyVersion: 2.4
+  NewCops: disable
 Metrics/BlockLength:
   Max: 100
 Layout/LineLength:
