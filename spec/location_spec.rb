@@ -20,6 +20,11 @@ describe OpenCage::Geocoder::Location do
     expect(subject.confidence).to eq(9)
   end
 
+  it 'has geometry', :vcr do
+    expect(subject.bounds).to eq({ 'northeast' => { 'lat' => -22.6791326, 'lng' => 14.5268516 },
+                                   'southwest' => { 'lat' => -22.6792326, 'lng' => 14.5267516 } })
+  end
+
   it 'has bounds', :vcr do
     expect(subject.bounds).to eq({ 'northeast' => { 'lat' => -22.6791326, 'lng' => 14.5268516 },
                                    'southwest' => { 'lat' => -22.6792326, 'lng' => 14.5267516 } })
