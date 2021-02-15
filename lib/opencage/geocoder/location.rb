@@ -36,6 +36,10 @@ module OpenCage
       def confidence
         @result['confidence']
       end
+
+      def bounds
+        @result['bounds']
+      end
     end
   end
 end
