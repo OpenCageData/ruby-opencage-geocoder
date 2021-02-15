@@ -1,3 +1,11 @@
+2.1.4 - Mon Feb 15 2021
+===============================================================
+- accessor for retrieving bounds and geometry of a result (thanks to mattcollins)
+
+2.1.3 - Thu Jan 28 2021
+===============================================================
+- test against Ruby 3.0
+
 2.1.2 - Sat Feb 29 2020
 ===============================================================
 - various Ruby gem updates, newest Rubocop

@@ -67,7 +67,8 @@ p results.first.components
 #   "ISO_3166-1_alpha-2" => "CA",
 #   "ISO_3166-1_alpha-3" => "CAN"
 # }
-
+p results.first.geometry # might be empty for some results 
+p results.first.bounds # might be empty for some results 
 ```
 
 ### Convert latitude, longitude to an address

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    opencage-geocoder (2.1.2)
+    opencage-geocoder (2.1.4)
 
 GEM
   remote: https://rubygems.org/
@@ -30,11 +30,11 @@ GEM
     rspec-expectations (3.10.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.10.0)
-    rspec-mocks (3.10.1)
+    rspec-mocks (3.10.2)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.10.0)
-    rspec-support (3.10.1)
-    rubocop (1.9.0)
+    rspec-support (3.10.2)
+    rubocop (1.10.0)
       parallel (~> 1.10)
       parser (>= 3.0.0.0)
       rainbow (>= 2.2.2, < 4.0)
@@ -48,7 +48,7 @@ GEM
     ruby-progressbar (1.11.0)
     unicode-display_width (2.0.0)
     vcr (6.0.0)
-    webmock (3.11.1)
+    webmock (3.11.2)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
