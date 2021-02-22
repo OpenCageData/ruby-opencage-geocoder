@@ -7,6 +7,7 @@ A Ruby client for the [OpenCage](https://opencagedata.com/) geocoding API.
 [![Build Status](https://travis-ci.org/OpenCageData/ruby-opencage-geocoder.svg?branch=master)](https://travis-ci.org/OpenCageData/ruby-opencage-geocoder)
 [![Kritika Analysis Status](https://kritika.io/users/freyfogle/repos/3990778871294442/heads/master/status.svg)](https://kritika.io/users/freyfogle/repos/3990778871294442/heads/master/)
 [![Gem Version](https://badge.fury.io/rb/opencage-geocoder.svg)](https://badge.fury.io/rb/opencage-geocoder)
+[![Twitter Follow](https://img.shields.io/twitter/follow/OpenCage?label=Follow%20OpenCage&style=social)](https://twitter.com/opencage)
 
 ## Installation
 
