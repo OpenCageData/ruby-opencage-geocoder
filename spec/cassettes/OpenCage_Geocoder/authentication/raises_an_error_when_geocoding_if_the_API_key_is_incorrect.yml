@@ -15,27 +15,33 @@ http_interactions:
       - Ruby
   response:
     status:
-      code: 403
-      message: Forbidden
+      code: 401
+      message: Unauthorized
     headers:
       Date:
-      - Sat, 30 Mar 2019 15:11:18 GMT
+      - Wed, 26 Oct 2022 16:53:03 GMT
       Server:
-      - Apache/2.4.29 (Ubuntu)
+      - Apache
       Access-Control-Allow-Origin:
       - "*"
-      Transfer-Encoding:
-      - chunked
+      Vary:
+      - Accept-Encoding
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '290'
       Content-Type:
       - application/json; charset=utf-8
       Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains
+      - max-age=31536000; includeSubDomains; preload
     body:
-      encoding: UTF-8
-      string: '{"documentation":"https://opencagedata.com/api","licenses":[{"name":"CC-BY-SA","url":"https://creativecommons.org/licenses/by-sa/3.0/"},{"name":"ODbL","url":"https://opendatacommons.org/licenses/odbl/summary/"}],"results":[],"status":{"code":403,"message":"invalid
-        API key"},"stay_informed":{"blog":"https://blog.opencagedata.com","twitter":"https://twitter.com/opencagedata"},"thanks":"For
-        using an OpenCage Data API","timestamp":{"created_http":"Sat, 30 Mar 2019
-        15:11:18 GMT","created_unix":1553958678},"total_results":0}'
-    http_version: 
-  recorded_at: Sat, 30 Mar 2019 15:11:18 GMT
-recorded_with: VCR 4.0.0
+      encoding: ASCII-8BIT
+      string: '{"documentation":"https://opencagedata.com/api","licenses":[{"name":"see
+        attribution guide","url":"https://opencagedata.com/credits"}],"results":[],"status":{"code":401,"message":"invalid
+        API key"},"stay_informed":{"blog":"https://blog.opencagedata.com","twitter":"https://twitter.com/OpenCage"},"thanks":"For
+        using an OpenCage API","timestamp":{"created_http":"Wed, 26 Oct 2022 16:53:03
+        GMT","created_unix":1666803183},"total_results":0}'
+  recorded_at: Wed, 26 Oct 2022 16:53:03 GMT
+recorded_with: VCR 6.0.0

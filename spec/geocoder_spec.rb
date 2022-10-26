@@ -9,14 +9,14 @@ describe OpenCage::Geocoder do
     it 'raises an error if the API key is missing' do
       expect do
         OpenCage::Geocoder.new
-      end.to raise_error(OpenCage::Geocoder::GeocodingError)
+      end.to raise_error(OpenCage::Error::AuthenticationError)
     end
 
     it 'raises an error when geocoding if the API key is incorrect', :vcr do
       expect do
         geo = OpenCage::Geocoder.new(api_key: 'AN-INVALID-KEY')
         geo.geocode('SOMEWHERE')
-      end.to raise_error(OpenCage::Geocoder::GeocodingError, 'invalid API key')
+      end.to raise_error(OpenCage::Error::AuthenticationError)
     end
 
     it 'raises an error when geocoding if the user is out of quota' do
@@ -26,7 +26,7 @@ describe OpenCage::Geocoder do
 
       expect do
         geo.geocode('SOMEWHERE')
-      end.to raise_error(OpenCage::Geocoder::GeocodingError, 'out of quota')
+      end.to raise_error(OpenCage::Error::QuotaExceeded)
     end
   end
 
@@ -46,7 +46,7 @@ describe OpenCage::Geocoder do
     it 'raises an error for non-numeric input' do
       expect do
         geo.reverse_geocode('NOT-A-COORD', 51.50934)
-      end.to raise_error(OpenCage::Geocoder::GeocodingError, 'not valid numeric coordinates: "NOT-A-COORD", 51.50934')
+      end.to raise_error(OpenCage::Error::InvalidRequest)
     end
   end
 
