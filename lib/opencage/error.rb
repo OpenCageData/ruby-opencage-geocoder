@@ -32,6 +32,6 @@ module OpenCage
       426 => OpenCage::Error::UpgradeRequired,
       429 => OpenCage::Error::TooManyRequests,
       503 => OpenCage::Error::InternalServer
-    }
+    }.freeze
   end
 end
