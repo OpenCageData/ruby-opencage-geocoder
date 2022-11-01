@@ -1,10 +1,10 @@
-dist: focal
+dist: jammy
 language: ruby
-rvm:
-- 2.5
+rvm: # https://www.ruby-lang.org/en/downloads/branches/
 - 2.6
 - 2.7
 - 3.0
+- 3.1
 install:
 - gem update --system --silent
 - gem install bundler
