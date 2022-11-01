@@ -22,6 +22,8 @@ Then run the test suite using rspec:
 rspec
 ```
 
+(If `rspec` isn't found try `bundle exec rspec`)
+
 We use the [VCR gem](https://github.com/vcr/vcr) to record HTTP requests to the
 OpenCage API. If you add a test that makes an HTTP request you will need to tag
 it with the `:vcr` tag, for example:

@@ -1,6 +1,6 @@
 require File.expand_path 'spec_helper.rb', __dir__
 
-describe 'ruby' do
+describe 'Ruby linting', type: :feature do
   it 'run rubocop' do
     expect do
       system('bundle exec rubocop --format simple 2>&1')

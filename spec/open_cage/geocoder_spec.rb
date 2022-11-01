@@ -1,4 +1,4 @@
-require File.expand_path 'spec_helper.rb', __dir__
+require File.expand_path '../spec_helper.rb', __dir__
 
 describe OpenCage::Geocoder do
   def geo
@@ -8,13 +8,13 @@ describe OpenCage::Geocoder do
   describe 'authentication' do
     it 'raises an error if the API key is missing' do
       expect do
-        OpenCage::Geocoder.new
+        described_class.new
       end.to raise_error(OpenCage::Error::AuthenticationError)
     end
 
     it 'raises an error when geocoding if the API key is incorrect', :vcr do
       expect do
-        geo = OpenCage::Geocoder.new(api_key: 'AN-INVALID-KEY')
+        geo = described_class.new(api_key: 'AN-INVALID-KEY')
         geo.geocode('SOMEWHERE')
       end.to raise_error(OpenCage::Error::AuthenticationError)
     end
