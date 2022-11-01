@@ -20,7 +20,9 @@ describe OpenCage::Geocoder::Location do
     expect(reverse_result.confidence).to eq(9)
   end
 
-  it 'has geometry', :vcr do
+  it 'has coordinates, latitude, longitude', :vcr do
+    expect(reverse_result.coordinates).to eq([-22.6791826, 14.5268016])
+
     expect(reverse_result.lat).to eq(-22.6791826)
     expect(reverse_result.lng).to eq(14.5268016)
   end

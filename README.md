@@ -95,18 +95,28 @@ p result.annotations['timezone']
 
 ### Error handling
 
-The geocoder will return an `OpenCage::Geocoder::GeocodingError` if there is a
+The geocoder will return an `OpenCage::Error` subclass if there is a
 problem with either input or response, for example:
 
 ```ruby
-# Invalid API key
-geocoder =  OpenCage::Geocoder.new(api_key: 'invalid-api-key')
-geocoder.geocode('Manchester')
-# OpenCage::Geocoder::GeocodingError (invalid API key)
+begin
+  # Invalid API key
+  geocoder =  OpenCage::Geocoder.new(api_key: 'invalid-api-key')
+  geocoder.geocode('Manchester')
+rescue OpenCage::Geocoder::AuthenticationError => e
+  p 'invalid apikey'
+rescue OpenCage::Geocoder::QuotaExceeded => e
+  p 'over quota'
+rescue StandardError => e
+  p 'other error: ' + e.message
+end
 
 # Using strings instead of numbers for reverse geocoding
 geocoder.reverse_geocode('51.5019951', '-0.0698806')
-# OpenCage::Geocoder::GeocodingError (not valid numeric coordinates: "51.5019951", "-0.0698806")
+# raises OpenCage::Geocoder::InvalidRequest (not valid numeric coordinates: "51.5019951", "-0.0698806")
+
+begin
+  
 ```
 
 ### Batch geocoding
@@ -146,7 +156,11 @@ puts results.map(&:address)
 # Китайское бистро, Apraksin Yard, Михайловский проезд ...
 ```
 
-## Upgrading from version 0.1x
+## Upgrading to version 3.0
+
+* Version 2.x raised `OpenCage::Geocoder`. Now `OpenCage::Error` is raised.
+
+## Upgrading to version 2.0
 
 * Version 0.1x only returned one result
 

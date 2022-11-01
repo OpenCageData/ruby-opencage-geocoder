@@ -1,3 +1,13 @@
+3.0.0 - Tue Nov 1 2022
+===============================================================
+- Instead of raising generic `OpenCage::Geocoder::GeocodingError`, now raising `OpenCage::Error::<label>`, thanks russointroitoa
+- remove support for Ruby 2.5 (EOL 2021-04-05)
+- various Ruby gem updates, newest Rubocop
+- test suite: test against Ruby 3.1
+- test suite: add tests for Location .coordinates, .lat, .lng
+- test suite: restructure tests into subdirectories
+- test suite: also run rubocop-rspec linting (plus fixes)
+
 2.1.4 - Mon Feb 15 2021
 ===============================================================
 - accessor for retrieving bounds and geometry of a result (thanks to mattcollins)

@@ -31,7 +31,10 @@ module OpenCage
       410 => OpenCage::Error::RequestTooLong,
       426 => OpenCage::Error::UpgradeRequired,
       429 => OpenCage::Error::TooManyRequests,
-      503 => OpenCage::Error::InternalServer
+      500 => OpenCage::Error::InternalServer,
+      502 => OpenCage::Error::InternalServer,
+      503 => OpenCage::Error::InternalServer,
+      504 => OpenCage::Error::InternalServer
     }.freeze
   end
 end
