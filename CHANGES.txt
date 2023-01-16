@@ -1,3 +1,9 @@
+3.1.0 - Mon Jan 16 2023
+===============================================================
+- remove support for Ruby 2.5 (EOL 2021-04-05)
+- various Ruby gem updates, newest Rubocop
+- test suite: test against Ruby 3.1
+
 3.0.0 - Tue Nov 1 2022
 ===============================================================
 - Instead of raising generic `OpenCage::Geocoder::GeocodingError`, now raising `OpenCage::Error::<label>`, thanks russointroitoa
