@@ -20,8 +20,11 @@ Or in your Gemfile:
 source 'https://rubygems.org'
 gem 'opencage-geocoder'
 ```
+## Tutorial
 
-## Documentation
+You can find a comprehensive [tutorial for using this module on the OpenCage site](https://opencagedata.com/tutorials/geocode-in-ruby).
+
+## API Documentation
 
 Complete documentation for the OpenCage geocoding API can be found at
 [opencagedata.com/api](https://opencagedata.com/api).
