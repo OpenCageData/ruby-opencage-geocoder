@@ -1,4 +1,4 @@
-name: Test
+name: test
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [master]
 
 jobs:
-  test:
+  rspec:
     strategy:
       fail-fast: false
       matrix:
