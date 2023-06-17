@@ -4,7 +4,7 @@ A Ruby client for the [OpenCage geocoding API](https://opencagedata.com/api).
 
 ## Build status / Code quality / etc
 
-[![Build Status](https://travis-ci.com/OpenCageData/ruby-opencage-geocoder.svg?branch=master)](https://travis-ci.com/OpenCageData/ruby-opencage-geocoder)
+[![Build Status](https://github.com/OpenCageData/ruby-opencage-geocoder/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/OpenCageData/ruby-opencage-geocoder/actions/workflows/build.yml)
 [![Gem Version](https://badge.fury.io/rb/opencage-geocoder.svg)](https://badge.fury.io/rb/opencage-geocoder)
 ![Mastodon Follow](https://img.shields.io/mastodon/follow/109287663468501769?domain=https%3A%2F%2Fen.osm.town%2F&style=social)
 
@@ -20,6 +20,7 @@ Or in your Gemfile:
 source 'https://rubygems.org'
 gem 'opencage-geocoder'
 ```
+
 ## Tutorial
 
 You can find a comprehensive [tutorial for using this module on the OpenCage site](https://opencagedata.com/tutorials/geocode-in-ruby).
@@ -70,8 +71,8 @@ p results.first.components
 #   "ISO_3166-1_alpha-2" => "CA",
 #   "ISO_3166-1_alpha-3" => "CAN"
 # }
-p results.first.geometry # might be empty for some results 
-p results.first.bounds # might be empty for some results 
+p results.first.geometry # might be empty for some results
+p results.first.bounds # might be empty for some results
 ```
 
 ### Convert latitude, longitude to an address
@@ -119,7 +120,7 @@ geocoder.reverse_geocode('51.5019951', '-0.0698806')
 # raises OpenCage::Geocoder::InvalidRequest (not valid numeric coordinates: "51.5019951", "-0.0698806")
 
 begin
-  
+
 ```
 
 ### Batch geocoding
@@ -161,11 +162,11 @@ puts results.map(&:address)
 
 ## Upgrading to version 3.0
 
-* Version 2.x raised `OpenCage::Geocoder`. Now `OpenCage::Error` is raised.
+- Version 2.x raised `OpenCage::Geocoder`. Now `OpenCage::Error` is raised.
 
 ## Upgrading to version 2.0
 
-* Version 0.1x only returned one result
+- Version 0.1x only returned one result
 
 ```
 geocoder.geocode('Berlin').coordinates # Version 0.12
@@ -175,8 +176,7 @@ geocoder.reverse_geocode(50, 7).name # Version 0.12
 geocoder.reverse_geocode(50, 7).address # Version 2
 ```
 
-* Version 0.1x raised an error when no result was found. Version 2 returns an empty list (forward) or nil (reverse).
-
+- Version 0.1x raised an error when no result was found. Version 2 returns an empty list (forward) or nil (reverse).
 
 ## Copyright
 
@@ -186,7 +186,7 @@ Copyright (c) OpenCage GmbH. See LICENSE for details.
 
 <a href="https://opencagedata.com"><img src="opencage_logo_300_150.png"></a>
 
-We run a worldwide [geocoding API](https://opencagedata.com/api) and [geosearch](https://opencagedata.com/geosearch) service based on open data. 
-Learn more [about us](https://opencagedata.com/about). 
+We run a worldwide [geocoding API](https://opencagedata.com/api) and [geosearch](https://opencagedata.com/geosearch) service based on open data.
+Learn more [about us](https://opencagedata.com/about).
 
 We also run [Geomob](https://thegeomob.com), a series of regular meetups for location based service creators, where we do our best to highlight geoinnovation. If you like geo stuff, you will probably enjoy [the Geomob podcast](https://thegeomob.com/podcast/).
