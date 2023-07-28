@@ -1,5 +1,9 @@
-unreleased
+3.1.1 - Fri Jul 28 2023
+===============================================================
+- feature: add .latitude and .longitude accessor aliases (thanks @thestelz)
 - test suite: Switched from Travis-CI to Github Actions
+- test suite: test against Ruby 3.2
+- various Ruby gem updates, newest Rubocop
 
 3.1.0 - Mon Jan 16 2023
 ===============================================================

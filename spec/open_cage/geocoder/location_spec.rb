@@ -25,6 +25,9 @@ describe OpenCage::Geocoder::Location do
 
     expect(reverse_result.lat).to eq(-22.6791826)
     expect(reverse_result.lng).to eq(14.5268016)
+
+    expect(reverse_result.latitude).to eq(-22.6791826)
+    expect(reverse_result.longitude).to eq(14.5268016)
   end
 
   it 'has bounds', :vcr do

@@ -141,11 +141,11 @@ geocoder = OpenCage::Geocoder.new(api_key: 'your-api-key-here')
 
 results = []
 File.foreach('queries.txt') do |line|
-  lat, lng = line.chomp.split(',')
+  latitude, longitude = line.chomp.split(',')
 
   # Use Float() rather than #to_f because it will throw an ArgumentError if
   # there is an invalid line in the queries.txt file
-  result = geocoder.reverse_geocode(Float(lat), Float(lng))
+  result = geocoder.reverse_geocode(Float(latitude), Float(longitude))
   results.push(result)
 rescue ArgumentError, OpenCage::Geocoder::GeocodingError => error
   # Stop looping through the queries if there is an error
