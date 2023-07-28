@@ -21,9 +21,13 @@ module OpenCage
         @result['geometry']['lat'].to_f
       end
 
+      alias latitude lat
+
       def lng
         @result['geometry']['lng'].to_f
       end
+
+      alias longitude lng
 
       def components
         @result['components']
