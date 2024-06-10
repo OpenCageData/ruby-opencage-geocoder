@@ -20,6 +20,9 @@ module OpenCage
     end
 
     def reverse_geocode(lat, lng, options = {})
+      lat = to_float(lat)
+      lng = to_float(lng)
+
       if [lat, lng].any? { |coord| !coord.is_a?(Numeric) }
         raise_error("400 Not valid numeric coordinates: #{lat.inspect}, #{lng.inspect}")
       end
@@ -39,6 +42,12 @@ module OpenCage
       code = String(error).slice(0, 3)
       klass = OpenCage::Error::ERRORS[code.to_i]
       raise klass.new(message: String(error), code: code.to_i)
+    end
+
+    def to_float(coord)
+      Float(coord)
+    rescue ArgumentError
+      coord
     end
   end
 end
