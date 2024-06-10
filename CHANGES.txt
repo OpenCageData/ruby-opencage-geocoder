@@ -1,3 +1,9 @@
+3.1.2 - Mon Jun 10 2024
+===============================================================
+- last release supporting Ruby 2.x
+- various Ruby gem updates, newest Rubocop
+- test suite: test against Ruby 3.3
+
 3.1.1 - Fri Jul 28 2023
 ===============================================================
 - feature: add .latitude and .longitude accessor aliases (thanks @thestelz)
