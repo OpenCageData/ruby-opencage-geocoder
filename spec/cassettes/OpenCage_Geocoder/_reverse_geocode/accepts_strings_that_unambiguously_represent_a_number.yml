@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.opencagedata.com/geocode/v1/json?key=<API_KEY>&q=53.0,-6.266155
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 10 Jun 2024 12:49:57 GMT
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ratelimit-Limit:
+      - '2500'
+      X-Ratelimit-Remaining:
+      - '2496'
+      X-Ratelimit-Reset:
+      - '1718064000'
+      Vary:
+      - Accept-Encoding
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '2613'
+      Content-Type:
+      - application/json; charset=utf-8
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"documentation":"https://opencagedata.com/api","licenses":[{"name":"see
+        attribution guide","url":"https://opencagedata.com/credits"}],"rate":{"limit":2500,"remaining":2496,"reset":1718064000},"results":[{"annotations":{"DMS":{"lat":"53\u00b0
+        0'' 8.11188'''' N","lng":"6\u00b0 16'' 6.61476'''' W"},"ITM":{"easting":716215.993,"northing":696017.915},"MGRS":"29UPU8328376011","Maidenhead":"IO63ua70sm","Mercator":{"x":-697806.683,"y":6949265.187},"NUTS":{"NUTS0":{"code":"IE"},"NUTS1":{"code":"IE0"},"NUTS2":{"code":"IE06"},"NUTS3":{"code":"IE062"}},"OSM":{"edit_url":"https://www.openstreetmap.org/edit?way=511847813#map=16/53.00225/-6.26850","note_url":"https://www.openstreetmap.org/note/new#map=16/53.00225/-6.26850&layers=N","url":"https://www.openstreetmap.org/?mlat=53.00225&mlon=-6.26850#map=16/53.00225/-6.26850"},"UN_M49":{"regions":{"EUROPE":"150","IE":"372","NORTHERN_EUROPE":"154","WORLD":"001"},"statistical_groupings":["MEDC"]},"callingcode":353,"currency":{"alternate_symbols":[],"decimal_mark":".","html_entity":"\u20ac","iso_code":"EUR","iso_numeric":"978","name":"Euro","smallest_denomination":1,"subunit":"Cent","subunit_to_unit":100,"symbol":"\u20ac","symbol_first":1,"thousands_separator":","},"flag":"\ud83c\uddee\ud83c\uddea","geohash":"gc7t92g2t20sd2mf89zf","qibla":113.8,"roadinfo":{"drive_on":"left","road":"unnamed
+        road","speed_in":"km/h"},"sun":{"rise":{"apparent":1717992060,"astronomical":0,"civil":1717989060,"nautical":1717983960},"set":{"apparent":1718052540,"astronomical":0,"civil":1718055540,"nautical":1718060640}},"timezone":{"name":"Europe/Dublin","now_in_dst":0,"offset_sec":3600,"offset_string":"+0100","short_name":"IST"},"what3words":{"words":"ranked.grudgingly.dorms"}},"bounds":{"northeast":{"lat":53.0051599,"lng":-6.2654322},"southwest":{"lat":53.0001347,"lng":-6.272132}},"components":{"ISO_3166-1_alpha-2":"IE","ISO_3166-1_alpha-3":"IRL","ISO_3166-2":["IE-L","IE-WW"],"_category":"road","_type":"road","continent":"Europe","country":"Ireland","country_code":"ie","county":"County
+        Wicklow","county_code":"WW","political_union":"European Union","postcode":"A98
+        VY72","region":"The Municipal District of Wicklow","road":"unnamed road"},"confidence":9,"distance_from_q":{"meters":295},"formatted":"unnamed
+        road, County Wicklow, A98 VY72, Ireland","geometry":{"lat":53.0022533,"lng":-6.2685041}}],"status":{"code":200,"message":"OK"},"stay_informed":{"blog":"https://blog.opencagedata.com","mastodon":"https://en.osm.town/@opencage"},"thanks":"For
+        using an OpenCage API","timestamp":{"created_http":"Mon, 10 Jun 2024 12:49:57
+        GMT","created_unix":1718023797},"total_results":1}'
+  recorded_at: Mon, 10 Jun 2024 12:49:57 GMT
+recorded_with: VCR 6.2.0

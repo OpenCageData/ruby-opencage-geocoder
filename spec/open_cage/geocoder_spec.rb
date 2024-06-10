@@ -45,8 +45,14 @@ describe OpenCage::Geocoder do
 
     it 'raises an error for non-numeric input' do
       expect do
-        geo.reverse_geocode('NOT-A-COORD', 51.50934)
+        geo.reverse_geocode('0.0 NOT-A-COORD', 51.50934)
       end.to raise_error(OpenCage::Error::InvalidRequest)
+    end
+
+    it 'accepts strings that unambiguously represent a number', :vcr do
+      expect do
+        geo.reverse_geocode('53', '-6.266155')
+      end.not_to raise_error
     end
   end
 
