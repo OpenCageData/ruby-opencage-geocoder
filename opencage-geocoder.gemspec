@@ -5,7 +5,7 @@ require 'opencage/version'
 Gem::Specification.new do |s|
   s.name                  = 'opencage-geocoder'
   s.version               = OpenCage::VERSION
-  s.required_ruby_version = '>= 2.7'
+  s.required_ruby_version = '>= 3.0'
   s.licenses              = ['MIT']
   s.summary               = 'A client for the OpenCage geocoder API'
   s.description           = 'A client for the OpenCage geocoding API - https://opencagedata.com/'

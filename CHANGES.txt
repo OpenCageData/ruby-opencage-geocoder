@@ -1,3 +1,8 @@
+3.2.0 - Mon Jun 10 2024
+===============================================================
+- Ruby 2.x no longer supported
+- various Ruby gem updates
+
 3.1.2 - Mon Jun 10 2024
 ===============================================================
 - last release supporting Ruby 2.x
