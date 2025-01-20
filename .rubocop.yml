@@ -1,9 +1,10 @@
 require:
-  - rubocop-rake
   - rubocop-rspec
+  - rubocop-performance
 AllCops:
   TargetRubyVersion: 3.0
   NewCops: disable
+  SuggestExtensions: false
 Metrics/BlockLength:
   Max: 100
 Layout/LineLength:
