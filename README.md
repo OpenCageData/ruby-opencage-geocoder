@@ -107,9 +107,9 @@ begin
   # Invalid API key
   geocoder =  OpenCage::Geocoder.new(api_key: 'invalid-api-key')
   geocoder.geocode('Manchester')
-rescue OpenCage::Geocoder::AuthenticationError => e
+rescue OpenCage::Error::AuthenticationError => e
   p 'invalid apikey'
-rescue OpenCage::Geocoder::QuotaExceeded => e
+rescue OpenCage::Error::QuotaExceeded => e
   p 'over quota'
 rescue StandardError => e
   p 'other error: ' + e.message
@@ -117,7 +117,7 @@ end
 
 # Using strings instead of numbers for reverse geocoding
 geocoder.reverse_geocode('51.5019951', '-0.0698806')
-# raises OpenCage::Geocoder::InvalidRequest (not valid numeric coordinates: "51.5019951", "-0.0698806")
+# raises OpenCage::Error::InvalidRequest (not valid numeric coordinates: "51.5019951", "-0.0698806")
 
 begin
 
@@ -147,7 +147,7 @@ File.foreach('queries.txt') do |line|
   # there is an invalid line in the queries.txt file
   result = geocoder.reverse_geocode(Float(latitude), Float(longitude))
   results.push(result)
-rescue ArgumentError, OpenCage::Geocoder::GeocodingError => error
+rescue ArgumentError, OpenCage::Error::GeocodingError => error
   # Stop looping through the queries if there is an error
   puts "Error: #{error.message}"
   break

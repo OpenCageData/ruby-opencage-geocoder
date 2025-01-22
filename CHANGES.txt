@@ -1,3 +1,10 @@
+3.2.1 - Wed Jan 22 2025
+===============================================================
+- Documentation: With 3.0 we changed the classname of exceptions
+- test suite: update rubocop
+- test suite: alsotest against Ruby 3.4
+- various Ruby gem updates
+
 3.2.0 - Mon Jun 10 2024
 ===============================================================
 - Ruby 2.x no longer supported
