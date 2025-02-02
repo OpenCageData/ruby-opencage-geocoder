@@ -83,4 +83,28 @@ describe OpenCage::Geocoder do
       expect(geo.geocode('NOWHERE-INTERESTING')).to eql([])
     end
   end
+
+  describe 'user agent' do
+    before do
+      stub_request(:get, /api\.opencagedata\.com/)
+        .to_return(body: '{}', status: 200)
+    end
+
+    it 'uses a default user agent' do
+      described_class.new(api_key: ENV.fetch('OPEN_CAGE_API_KEY'))
+                     .geocode('SOMEWHERE')
+
+      expect(WebMock).to have_requested(:get, /api\.opencagedata\.com/)
+        .with(headers: { 'User-Agent' => "opencage-ruby/#{OpenCage::VERSION} Ruby/#{RUBY_VERSION}" })
+    end
+
+    it 'allows a custom user agent to be set' do
+      user_agent = 'my-app/1.0'
+      described_class.new(api_key: ENV.fetch('OPEN_CAGE_API_KEY'), user_agent: user_agent)
+                     .geocode('SOMEWHERE')
+
+      expect(WebMock).to have_requested(:get, /api\.opencagedata\.com/)
+        .with(headers: { 'User-Agent' => user_agent })
+    end
+  end
 end
