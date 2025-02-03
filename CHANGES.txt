@@ -1,3 +1,7 @@
+3.2.2 - Mon Feb 3 2025
+===============================================================
+- feature: user-agent string can be set now
+
 3.2.1 - Wed Jan 22 2025
 ===============================================================
 - Documentation: With 3.0 we changed the classname of exceptions
