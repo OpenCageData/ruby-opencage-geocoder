@@ -1,6 +1,7 @@
 require 'opencage/geocoder/location'
 require 'opencage/geocoder/request'
 require 'opencage/error'
+require 'opencage/version'
 require 'open-uri'
 require 'json'
 
@@ -8,6 +9,7 @@ module OpenCage
   class Geocoder
     def initialize(default_options = {})
       @api_key = default_options.fetch(:api_key) { raise_error('401 Missing API key') }
+      @user_agent = default_options.fetch(:user_agent) { "opencage-ruby/#{OpenCage::VERSION} Ruby/#{RUBY_VERSION}" }
     end
 
     def geocode(location, options = {})
@@ -33,9 +35,13 @@ module OpenCage
     private
 
     def fetch(url)
-      JSON.parse(URI(url).open.read)['results']
+      JSON.parse(URI(url).open(headers).read)['results']
     rescue OpenURI::HTTPError => e
       raise_error(e)
+    end
+
+    def headers
+      { 'User-Agent' => @user_agent }
     end
 
     def raise_error(error)
