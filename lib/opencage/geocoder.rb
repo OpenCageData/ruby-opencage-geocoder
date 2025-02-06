@@ -15,7 +15,17 @@ module OpenCage
     def geocode(location, options = {})
       request = Request.new(@api_key, location, options)
 
-      results = fetch(request.to_s)
+      begin
+        results = fetch(request.to_s)
+      rescue Errno::ECONNREFUSED
+        raise_error("408 Failed to open TCP connection to API #{request}")
+      rescue Errno::ECONNRESET
+        # Connection reset by peer - SSL_connect
+        raise_error("408 Failed to open SSL connection to API #{request}")
+      rescue Net::OpenTimeout
+        raise_error("408 Timeout connecting to API #{request}")
+      end
+
       return [] unless results
 
       results.map { |r| Location.new(r) }

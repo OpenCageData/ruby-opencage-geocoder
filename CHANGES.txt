@@ -1,3 +1,8 @@
+3.2.3 - Mon Feb 6 2025
+===============================================================
+- Treat some connection or SSL errors as timeout since the action
+  to take is the same: try the same request again
+
 3.2.2 - Mon Feb 3 2025
 ===============================================================
 - feature: user-agent string can be set now
