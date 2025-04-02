@@ -1,3 +1,7 @@
+3.2.4 - Wed Apr 2 2025
+===============================================================
+- Maintainance release. Ruby dependency updates only.
+
 3.2.3 - Mon Feb 6 2025
 ===============================================================
 - Treat some connection or SSL errors as timeout since the action
