@@ -11,9 +11,7 @@ group :development, :test do
   gem 'rubocop-capybara'
   gem 'rubocop-factory_bot'
   gem 'rubocop-performance'
-  gem 'rubocop-rails' # shouldn't be needed, https://github.com/rubocop/rubocop/issues/10893
   gem 'rubocop-rspec'
-  gem 'rubocop-rspec_rails'
   gem 'vcr'
   gem 'webmock'
 end
