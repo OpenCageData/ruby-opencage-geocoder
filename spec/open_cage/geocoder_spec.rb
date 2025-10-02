@@ -83,7 +83,7 @@ describe OpenCage::Geocoder do
       expect(geo.geocode('NOWHERE-INTERESTING')).to eql([])
     end
 
-    it 'raises and error when undefined query', :vcr do
+    it 'raises an error when undefined query', :vcr do
       expect do
         geo.geocode(nil)
       end.to raise_error(OpenCage::Error::InvalidRequest)
@@ -92,6 +92,12 @@ describe OpenCage::Geocoder do
     it 'raises an error empty query', :vcr do
       expect do
         geo.geocode('')
+      end.to raise_error(OpenCage::Error::InvalidRequest)
+    end
+
+    it 'raises a useful error when the query is not a string' do
+      expect do
+        geo.geocode({ query: 'NOT-A-STRING' }) # it's a hash
       end.to raise_error(OpenCage::Error::InvalidRequest)
     end
   end

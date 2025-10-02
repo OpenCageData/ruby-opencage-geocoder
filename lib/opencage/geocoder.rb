@@ -13,6 +13,8 @@ module OpenCage
     end
 
     def geocode(location, options = {})
+      raise_error("400 Not a valid location: `#{location.inspect}`") unless location.is_a?(String)
+
       request = Request.new(@api_key, location, options)
 
       begin
