@@ -7,19 +7,19 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
+      User-Agent:
+      - opencage-ruby/3.2.4 Ruby/3.1.5
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
-      User-Agent:
-      - Ruby
   response:
     status:
       code: 401
       message: Unauthorized
     headers:
       Date:
-      - Wed, 26 Oct 2022 16:53:03 GMT
+      - Thu, 02 Oct 2025 22:30:27 GMT
       Server:
       - Apache
       Access-Control-Allow-Origin:
@@ -31,7 +31,7 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       Content-Length:
-      - '290'
+      - '440'
       Content-Type:
       - application/json; charset=utf-8
       Strict-Transport-Security:
@@ -40,8 +40,8 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"documentation":"https://opencagedata.com/api","licenses":[{"name":"see
         attribution guide","url":"https://opencagedata.com/credits"}],"results":[],"status":{"code":401,"message":"invalid
-        API key"},"stay_informed":{"blog":"https://blog.opencagedata.com","twitter":"https://twitter.com/OpenCage"},"thanks":"For
-        using an OpenCage API","timestamp":{"created_http":"Wed, 26 Oct 2022 16:53:03
-        GMT","created_unix":1666803183},"total_results":0}'
-  recorded_at: Wed, 26 Oct 2022 16:53:03 GMT
-recorded_with: VCR 6.0.0
+        API key"},"stay_informed":{"blog":"https://blog.opencagedata.com","mastodon":"https://en.osm.town/@opencage"},"thanks":"For
+        using an OpenCage API","timestamp":{"created_http":"Thu, 02 Oct 2025 22:30:27
+        GMT","created_unix":1759444227},"total_results":0}'
+  recorded_at: Thu, 02 Oct 2025 22:30:27 GMT
+recorded_with: VCR 6.3.1

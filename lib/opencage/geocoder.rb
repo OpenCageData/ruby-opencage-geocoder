@@ -32,8 +32,12 @@ module OpenCage
     end
 
     def reverse_geocode(lat, lng, options = {})
-      lat = to_float(lat)
-      lng = to_float(lng)
+      begin
+        lat = to_float(lat)
+        lng = to_float(lng)
+      rescue TypeError
+        raise_error("400 Not valid numeric coordinates: #{lat.inspect}, #{lng.inspect}")
+      end
 
       if [lat, lng].any? { |coord| !coord.is_a?(Numeric) }
         raise_error("400 Not valid numeric coordinates: #{lat.inspect}, #{lng.inspect}")

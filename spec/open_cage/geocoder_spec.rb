@@ -33,14 +33,20 @@ describe OpenCage::Geocoder do
   describe '#reverse_geocode' do
     it 'reverse geocodes a set of coordinates', :vcr do
       expect(
-        geo.reverse_geocode(51.5019951, -0.0698806).address
-      ).to eql('Reeds Wharf, 33 Mill Street, London SE15, United Kingdom')
+        geo.reverse_geocode(51.501978, -0.069996).address
+      ).to eql('Reeds Wharf, 33 Mill Street, London, SE1 2AX, United Kingdom')
     end
 
     it 'set language', :vcr do
       expect(
-        geo.reverse_geocode(51.5019951, -0.0698806, language: 'ru').address
-      ).to match('Лондон SE15, Великобритания')
+        geo.reverse_geocode(51.501978, -0.069996, language: 'ru').address
+      ).to match('Reeds Wharf, 33 Mill Street, Лондон, SE1 2AX, Соединённое Королевство')
+    end
+
+    it 'raises an error for undefined input' do
+      expect do
+        geo.reverse_geocode(nil, nil)
+      end.to raise_error(OpenCage::Error::InvalidRequest)
     end
 
     it 'raises an error for non-numeric input' do
@@ -62,25 +68,31 @@ describe OpenCage::Geocoder do
     end
 
     it 'geocodes a postcode', :vcr do
-      expect(geo.geocode('EC1M 5RF').first.coordinates).to eql([51.522676, -0.102549])
+      expect(geo.geocode('EC1M 5RF').first.coordinates).to eql([51.522678, -0.102523])
     end
 
     it 'geocodes a place name with encoding', :vcr do
-      expect(geo.geocode('Münster').first.coordinates).to eql([51.9501317, 7.6133017])
+      expect(geo.geocode('Münster').first.coordinates).to eql([51.9625101, 7.6251879])
     end
 
     it 'correctly parses a request with encoding in the response', :vcr do
       expect(geo.geocode('Donostia').first.coordinates).to eql([43.3224219, -1.9838889])
     end
 
-    # it 'throws a useful error when no results are found' do
-    #   expect do
-    #     geo.geocode('NOWHERE-INTERESTING')
-    #   end.to raise_error(OpenCage::Geocoder::GeocodingError, 'location not found')
-    # end
-
     it 'empty list when no results are found', :vcr do
       expect(geo.geocode('NOWHERE-INTERESTING')).to eql([])
+    end
+
+    it 'raises and error when undefined query', :vcr do
+      expect do
+        geo.geocode(nil)
+      end.to raise_error(OpenCage::Error::InvalidRequest)
+    end
+
+    it 'raises an error empty query', :vcr do
+      expect do
+        geo.geocode('')
+      end.to raise_error(OpenCage::Error::InvalidRequest)
     end
   end
 

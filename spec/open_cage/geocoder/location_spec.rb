@@ -12,8 +12,8 @@ describe OpenCage::Geocoder::Location do
   end
 
   it 'has annotations', :vcr do
-    expect(reverse_result.annotations['geohash']).to eq('k7fqfx6h5jbq5tn8tnpn')
-    expect(reverse_result.annotations['DMS']['lat']).to eq("22° 40' 45.05736'' S")
+    expect(reverse_result.annotations['geohash']).to eq('k7fqfx67u7m1bew3kzh3')
+    expect(reverse_result.annotations['DMS']['lat']).to eq("22° 40' 45.26256'' S")
   end
 
   it 'has confidence', :vcr do
@@ -21,17 +21,17 @@ describe OpenCage::Geocoder::Location do
   end
 
   it 'has coordinates, latitude, longitude', :vcr do
-    expect(reverse_result.coordinates).to eq([-22.6791826, 14.5268016])
+    expect(reverse_result.coordinates).to eq([-22.6792396, 14.5272048])
 
-    expect(reverse_result.lat).to eq(-22.6791826)
-    expect(reverse_result.lng).to eq(14.5268016)
+    expect(reverse_result.lat).to eq(-22.6792396)
+    expect(reverse_result.lng).to eq(14.5272048)
 
-    expect(reverse_result.latitude).to eq(-22.6791826)
-    expect(reverse_result.longitude).to eq(14.5268016)
+    expect(reverse_result.latitude).to eq(-22.6792396)
+    expect(reverse_result.longitude).to eq(14.5272048)
   end
 
   it 'has bounds', :vcr do
-    expect(reverse_result.bounds).to eq({ 'northeast' => { 'lat' => -22.6791326, 'lng' => 14.5268516 },
-                                          'southwest' => { 'lat' => -22.6792326, 'lng' => 14.5267516 } })
+    expect(reverse_result.bounds).to eq({ 'northeast' => { 'lat' => -22.6791681, 'lng' => 14.5277944 },
+                                          'southwest' => { 'lat' => -22.6793015, 'lng' => 14.5266951 } })
   end
 end
