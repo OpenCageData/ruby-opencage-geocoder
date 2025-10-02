@@ -7,29 +7,29 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
+      User-Agent:
+      - opencage-ruby/3.2.4 Ruby/3.1.5
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
-      User-Agent:
-      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Mon, 15 Feb 2021 16:18:24 GMT
+      - Thu, 02 Oct 2025 22:30:27 GMT
       Server:
       - Apache
       Access-Control-Allow-Origin:
       - "*"
       X-Ratelimit-Limit:
-      - '2500'
+      - '50000'
       X-Ratelimit-Remaining:
-      - '2442'
+      - '40067'
       X-Ratelimit-Reset:
-      - '1613433600'
+      - '1759449600'
       Vary:
       - Accept-Encoding
       X-Frame-Options:
@@ -37,7 +37,7 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       Content-Length:
-      - '1298'
+      - '2586'
       Content-Type:
       - application/json; charset=utf-8
       Strict-Transport-Security:
@@ -45,14 +45,14 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: '{"documentation":"https://opencagedata.com/api","licenses":[{"name":"see
-        attribution guide","url":"https://opencagedata.com/credits"}],"rate":{"limit":2500,"remaining":2442,"reset":1613433600},"results":[{"annotations":{"DMS":{"lat":"22\u00b0
-        40'' 45.05736'''' S","lng":"14\u00b0 31'' 36.48576'''' E"},"MGRS":"33KVQ5139191916","Maidenhead":"JG77gh36fx","Mercator":{"x":1617116.157,"y":-2576798.589},"OSM":{"edit_url":"https://www.openstreetmap.org/edit?node=4488973891#map=17/-22.67918/14.52680","note_url":"https://www.openstreetmap.org/note/new#map=17/-22.67918/14.52680&layers=N","url":"https://www.openstreetmap.org/?mlat=-22.67918&mlon=14.52680#map=17/-22.67918/14.52680"},"UN_M49":{"regions":{"AFRICA":"002","NA":"516","SOUTHERN_AFRICA":"018","SUB-SAHARAN_AFRICA":"202","WORLD":"001"},"statistical_groupings":["LEDC"]},"callingcode":264,"currency":{"alternate_symbols":["N$"],"decimal_mark":".","disambiguate_symbol":"N$","format":"%n
+        attribution guide","url":"https://opencagedata.com/credits"}],"rate":{"limit":50000,"remaining":40067,"reset":1759449600},"results":[{"annotations":{"DMS":{"lat":"22\u00b0
+        40'' 45.26256'''' S","lng":"14\u00b0 31'' 37.93728'''' E"},"MGRS":"33KVQ5143391910","Maidenhead":"JG77gh36gx","Mercator":{"x":1617161.042,"y":-2576805.433},"OSM":{"edit_url":"https://www.openstreetmap.org/edit?way=184393212#map=17/-22.67924/14.52720","note_url":"https://www.openstreetmap.org/note/new#map=17/-22.67924/14.52720&layers=N","url":"https://www.openstreetmap.org/?mlat=-22.67924&mlon=14.52720#map=17/-22.67924/14.52720"},"UN_M49":{"regions":{"AFRICA":"002","NA":"516","SOUTHERN_AFRICA":"018","SUB-SAHARAN_AFRICA":"202","WORLD":"001"},"statistical_groupings":["LEDC"]},"callingcode":264,"currency":{"alternate_symbols":["N$"],"decimal_mark":".","disambiguate_symbol":"N$","format":"%n
         %u","html_entity":"$","iso_code":"NAD","iso_numeric":"516","name":"Namibian
-        Dollar","smallest_denomination":5,"subunit":"Cent","subunit_to_unit":100,"symbol":"$","symbol_first":0,"thousands_separator":","},"flag":"\ud83c\uddf3\ud83c\udde6","geohash":"k7fqfx6h5jbq5tn8tnpn","qibla":31.02,"roadinfo":{"drive_on":"left","road":"Woermann
-        St","speed_in":"km/h"},"sun":{"rise":{"apparent":1613364720,"astronomical":1613360040,"civil":1613363340,"nautical":1613361660},"set":{"apparent":1613410800,"astronomical":1613415480,"civil":1613412180,"nautical":1613413800}},"timezone":{"name":"Africa/Windhoek","now_in_dst":0,"offset_sec":7200,"offset_string":"+0200","short_name":"CAT"},"what3words":{"words":"integrate.laughter.teller"}},"bounds":{"northeast":{"lat":-22.6791326,"lng":14.5268516},"southwest":{"lat":-22.6792326,"lng":14.5267516}},"components":{"ISO_3166-1_alpha-2":"NA","ISO_3166-1_alpha-3":"NAM","_category":"commerce","_type":"restaurant","city":"Swakopmund","continent":"Africa","country":"Namibia","country_code":"na","postcode":"13001","restaurant":"Beryl''s
-        Restaurant","road":"Woermann St","state":"Erongo Region","suburb":"Central"},"confidence":9,"formatted":"Beryl''s
-        Restaurant, Woermann St, Swakopmund 13001, Namibia","geometry":{"lat":-22.6791826,"lng":14.5268016}}],"status":{"code":200,"message":"OK"},"stay_informed":{"blog":"https://blog.opencagedata.com","twitter":"https://twitter.com/OpenCage"},"thanks":"For
-        using an OpenCage API","timestamp":{"created_http":"Mon, 15 Feb 2021 16:18:24
-        GMT","created_unix":1613405904},"total_results":1}'
-  recorded_at: Mon, 15 Feb 2021 16:18:24 GMT
-recorded_with: VCR 6.0.0
+        Dollar","smallest_denomination":5,"subunit":"Cent","subunit_to_unit":100,"symbol":"$","symbol_first":0,"thousands_separator":","},"flag":"\ud83c\uddf3\ud83c\udde6","geohash":"k7fqfx67u7m1bew3kzh3","qibla":31.02,"roadinfo":{"drive_on":"left","road":"Woermann
+        Street","road_type":"residential","speed_in":"km/h"},"sun":{"rise":{"apparent":1759380180,"astronomical":1759375680,"civil":1759378800,"nautical":1759377240},"set":{"apparent":1759424400,"astronomical":1759428900,"civil":1759425780,"nautical":1759427340}},"timezone":{"name":"Africa/Windhoek","now_in_dst":0,"offset_sec":7200,"offset_string":"+0200","short_name":"CAT"},"what3words":{"words":"outsmarted.cheering.chemical"}},"bounds":{"northeast":{"lat":-22.6791681,"lng":14.5277944},"southwest":{"lat":-22.6793015,"lng":14.5266951}},"components":{"ISO_3166-1_alpha-2":"NA","ISO_3166-1_alpha-3":"NAM","ISO_3166-2":["NA-ER"],"_category":"road","_normalized_city":"Swakopmund","_type":"road","city":"Swakopmund","continent":"Africa","country":"Namibia","country_code":"na","postcode":"13001","road":"Woermann
+        Street","road_type":"residential","state":"Erongo Region","suburb":"Central"},"confidence":9,"distance_from_q":{"meters":4},"formatted":"Woermann
+        Street, Swakopmund 13001, Namibia","geometry":{"lat":-22.6792396,"lng":14.5272048}}],"status":{"code":200,"message":"OK"},"stay_informed":{"blog":"https://blog.opencagedata.com","mastodon":"https://en.osm.town/@opencage"},"thanks":"For
+        using an OpenCage API","timestamp":{"created_http":"Thu, 02 Oct 2025 22:30:27
+        GMT","created_unix":1759444227},"total_results":1}'
+  recorded_at: Thu, 02 Oct 2025 22:30:27 GMT
+recorded_with: VCR 6.3.1
