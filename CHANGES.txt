@@ -1,3 +1,11 @@
+3.3.0 - Mon Oct 6 2025
+===============================================================
+- Calling .geocode with an object as address now raises an exception (never worked in the past, now it's
+   more explicit)
+- Callling .reverse_geocode with undefinied values now raises an OpenCage::Error::InvalidRequest instead
+   of a generic TypeError
+- Added more test cased for invalid input values
+
 3.2.4 - Wed Apr 2 2025
 ===============================================================
 - Maintainance release. Ruby dependency updates only.
