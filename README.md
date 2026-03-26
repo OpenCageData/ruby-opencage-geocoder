@@ -30,6 +30,11 @@ You can find a comprehensive [tutorial for using this module on the OpenCage sit
 Complete documentation for the OpenCage geocoding API can be found at
 [opencagedata.com/api](https://opencagedata.com/api).
 
+## Working with AI / Agent Skill
+
+There is an [Agent Skill for working with the OpenCage Geocoding API](https://github.com/OpenCageData/opencage-skills/blob/master/opencage-geocoding-api/SKILL.md) which includes a reference file for developing in Ruby using this gem.
+
+
 ## Usage
 
 Create an instance of the geocoder, passing a valid OpenCage Geocoder API key:
