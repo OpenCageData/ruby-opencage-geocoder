@@ -14,5 +14,8 @@ Gem::Specification.new do |s|
   s.files                 = Dir['lib/**/*.{rb}']
   s.homepage              = 'https://opencagedata.com/tutorials/geocode-in-ruby'
   s.metadata              = { 'source_code_uri' => 'https://github.com/opencagedata/ruby-opencage-geocoder',
+                              'changelog_uri' => 'https://github.com/opencagedata/ruby-opencage-geocoder/blob/master/CHANGES.txt',
+                              'bug_tracker_uri' => 'https://github.com/opencagedata/ruby-opencage-geocoder/issues',
+                              'homepage_uri' => 'https://opencagedata.com/tutorials/geocode-in-ruby',
                               'rubygems_mfa_required' => 'true' }
 end
