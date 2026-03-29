@@ -18,13 +18,13 @@ module OpenCage
       end
 
       def lat
-        @result['geometry']['lat'].to_f
+        @result.dig('geometry', 'lat')&.to_f
       end
 
       alias latitude lat
 
       def lng
-        @result['geometry']['lng'].to_f
+        @result.dig('geometry', 'lng')&.to_f
       end
 
       alias longitude lng
