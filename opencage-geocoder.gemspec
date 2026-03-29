@@ -13,5 +13,6 @@ Gem::Specification.new do |s|
   s.email                 = 'support@opencagedata.com'
   s.files                 = Dir['lib/**/*.{rb}']
   s.homepage              = 'https://opencagedata.com/tutorials/geocode-in-ruby'
-  s.metadata              = { 'source_code_uri' => 'https://github.com/opencagedata/ruby-opencage-geocoder' }
+  s.metadata              = { 'source_code_uri' => 'https://github.com/opencagedata/ruby-opencage-geocoder',
+                              'rubygems_mfa_required' => 'true' }
 end
