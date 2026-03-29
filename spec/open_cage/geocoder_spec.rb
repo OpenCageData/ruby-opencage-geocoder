@@ -102,6 +102,15 @@ describe OpenCage::Geocoder do
     end
   end
 
+  describe '#redact_url' do
+    it 'keeps only the first 6 characters of the API key' do
+      url = 'https://api.opencagedata.com/geocode/v1/json?key=abcdef1234567890&q=London'
+      expect(geo.send(:redact_url, url)).to eql(
+        'https://api.opencagedata.com/geocode/v1/json?key=abcdef...[REDACTED]&q=London'
+      )
+    end
+  end
+
   describe 'user agent' do
     before do
       stub_request(:get, /api\.opencagedata\.com/)

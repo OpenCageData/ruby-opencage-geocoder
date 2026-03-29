@@ -3,6 +3,7 @@ require 'opencage/geocoder/request'
 require 'opencage/error'
 require 'opencage/version'
 require 'open-uri'
+require 'net/http'
 require 'json'
 
 module OpenCage
@@ -20,12 +21,12 @@ module OpenCage
       begin
         results = fetch(request.to_s)
       rescue Errno::ECONNREFUSED
-        raise_error("408 Failed to open TCP connection to API #{request}")
+        raise_error("408 Failed to open TCP connection to API #{redact_url(request)}")
       rescue Errno::ECONNRESET
         # Connection reset by peer - SSL_connect
-        raise_error("408 Failed to open SSL connection to API #{request}")
+        raise_error("408 Failed to open SSL connection to API #{redact_url(request)}")
       rescue Net::OpenTimeout
-        raise_error("408 Timeout connecting to API #{request}")
+        raise_error("408 Timeout connecting to API #{redact_url(request)}")
       end
 
       return [] unless results
@@ -53,7 +54,7 @@ module OpenCage
     def fetch(url)
       JSON.parse(URI(url).open(headers).read)['results']
     rescue OpenURI::HTTPError => e
-      raise_error(e)
+      raise_error(e.io.status.join(' '))
     end
 
     def headers
@@ -64,6 +65,10 @@ module OpenCage
       code = String(error).slice(0, 3)
       klass = OpenCage::Error::ERRORS[code.to_i]
       raise klass.new(message: String(error), code: code.to_i)
+    end
+
+    def redact_url(request)
+      request.to_s.gsub(/key=([^&]{6})[^&]*/, 'key=\1...[REDACTED]')
     end
 
     def to_float(coord)
