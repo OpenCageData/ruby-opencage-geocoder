@@ -1,3 +1,11 @@
+3.4.0 - Sun Mar 29 2026
+===============================================================
+- Validate the 'host' parameter. Should an opencagedata.com subdomain or localhost variant
+- Remove support for Ruby 3.1 (EOL 2025-03-31)
+- various Ruby gem updates
+- chore: remove ActiveSupport depencency
+- chore: set frozen_string_literal in preparation for Ruby 4.0
+
 3.3.0 - Mon Oct 6 2025
 ===============================================================
 - Calling .geocode with an object as address now raises an exception (never worked in the past, now it's
@@ -23,7 +31,7 @@
 ===============================================================
 - Documentation: With 3.0 we changed the classname of exceptions
 - test suite: update rubocop
-- test suite: alsotest against Ruby 3.4
+- test suite: also test against Ruby 3.4
 - various Ruby gem updates
 
 3.2.0 - Mon Jun 10 2024
