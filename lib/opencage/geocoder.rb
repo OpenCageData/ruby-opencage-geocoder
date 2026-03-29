@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'opencage/geocoder/location'
 require 'opencage/geocoder/request'
 require 'opencage/error'

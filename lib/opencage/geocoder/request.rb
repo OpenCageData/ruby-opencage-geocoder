@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module OpenCage
   class Geocoder
     class Request

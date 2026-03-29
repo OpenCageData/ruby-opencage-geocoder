@@ -14,7 +14,8 @@ Layout/LineLength:
 Style/Documentation:
   Enabled: false
 Style/FrozenStringLiteralComment:
-  Enabled: false
+  Enabled: true
+  EnforcedStyle: always
 Style/HashEachMethods:
   Enabled: true
 Style/HashTransformKeys:
