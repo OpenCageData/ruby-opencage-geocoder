@@ -32,7 +32,7 @@ Complete documentation for the OpenCage geocoding API can be found at
 
 ## Working with AI / Agent Skill
 
-There is an [Agent Skill for working with the OpenCage Geocoding API](https://github.com/OpenCageData/opencage-skills/blob/master/opencage-geocoding-api/SKILL.md) which includes a reference file for developing in Ruby using this gem.
+There is an [Agent Skill for working with the OpenCage Geocoding API](https://github.com/OpenCageData/opencage-skills/) which includes a reference file for developing in Ruby using this gem.
 
 
 ## Usage
